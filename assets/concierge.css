@@ -1,0 +1,213 @@
+/* The companion floats above the unchanged portfolio; the badge remains an unlabelled Easter egg. */
+:root{scrollbar-gutter:stable;--concierge-width:clamp(420px,35vw,600px);--concierge-ink:#19243b;--concierge-muted:#61708d;--concierge-line:#dce4f2;--concierge-blue:#173fff;--concierge-font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+.portfolio-header,.home-page .portfolio-header,.editorial-project .portfolio-header{z-index:110}
+.portfolio-header .header-actions{grid-column:3;justify-self:end;display:flex;align-items:center;gap:24px;min-width:0}
+.portfolio-header .header-actions .contact-menu{flex:none;grid-column:auto}
+.portfolio-header .concierge-trigger{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:6px 14px 6px 8px;border:1px solid #e0e8ff;border-radius:30px;background:#fafdff;color:#17233b;box-shadow:0 3px 9px #2b54b314;font:500 14px/1.5 var(--concierge-font);white-space:nowrap;cursor:pointer;transition:box-shadow .18s,border-color .18s}
+.portfolio-header .concierge-trigger:hover,.portfolio-header .concierge-trigger[aria-expanded="true"]{border-color:#b4c7ff;box-shadow:0 5px 18px #2b54b321}
+.concierge-avatar{display:block;position:relative;overflow:hidden;width:38px;height:38px;flex:0 0 38px;border-radius:50%;background:#f2f5fc}
+.concierge-avatar img{position:absolute;left:-60%;top:-4%;width:220%;max-width:none;height:auto;display:block}
+.concierge-ai{display:inline-flex;align-items:center;justify-content:center;flex:none;border-radius:20px;background:#e9ecff;color:#2041db;padding:2px 8px;font:500 12px/1.5 var(--concierge-font);white-space:nowrap;vertical-align:middle}
+.concierge-backdrop{position:fixed;inset:0;z-index:130;background:#23365638;backdrop-filter:blur(5px)}
+.concierge-panel{position:fixed;top:84px;right:16px;bottom:16px;z-index:140;display:flex;flex-direction:column;width:var(--concierge-width);min-width:0;border:1px solid #edf1ff;border-radius:26px;background:rgba(250,252,255,.97);box-shadow:-8px 12px 42px #233c7014,0 3px 8px #3153a30a;backdrop-filter:blur(24px);overflow:hidden;color:var(--concierge-ink);text-align:left;font:400 15px/1.75 var(--concierge-font);isolation:isolate}
+.concierge-panel *{box-sizing:border-box}
+.concierge-panel:focus{outline:none}
+.concierge-panel button,.concierge-panel textarea{font-family:var(--concierge-font)}
+.concierge-panel button{cursor:pointer}
+.concierge-panel p,.concierge-panel h2,.concierge-panel h3{margin:0;letter-spacing:normal}
+.concierge-panel a{color:inherit;text-decoration:none}
+.concierge-panel a:hover{color:var(--concierge-blue)}
+.concierge-panel :focus-visible,.concierge-trigger:focus-visible{outline:2px solid #2449ff;outline-offset:3px}
+.concierge-head{display:flex;align-items:flex-start;gap:13px;padding:23px 24px 11px;flex:none}
+.concierge-head>.concierge-avatar{width:46px;height:46px;flex-basis:46px}
+.concierge-head__copy{min-width:0;flex:1}
+.concierge-head__copy h2{display:inline;font:600 23px/1.5 var(--gallery-serif,"Songti SC",serif);color:#111d31}
+.concierge-head__copy .concierge-ai{margin-left:9px}
+.concierge-head__copy p{font-size:13px;line-height:1.65;color:#60708c;margin-top:4px}
+.concierge-controls{display:flex;align-items:center;gap:4px;padding-top:1px}
+.concierge-icon{display:inline-flex;align-items:center;justify-content:center;flex:none;width:32px;height:32px;padding:6px;background:transparent;border:0;border-radius:9px;color:#18233b}
+.concierge-icon img,.concierge-icon svg{width:18px;height:18px;max-width:none}
+.concierge-icon:hover{background:#eaf0fc}
+.concierge-panel .concierge-connection-status{flex:none;font-size:11px;line-height:1.6;color:#7a87a0;margin:0 26px 13px;padding-left:59px}
+.concierge-connection-status{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px}
+.concierge-connection-status[hidden]{display:none}
+.concierge-connection-retry{border:0;border-bottom:1px solid #bbc9e4;background:transparent;padding:2px 0;font-size:11px;line-height:1.5;color:#486aab}
+.concierge-connection-retry:hover{color:#173fff;border-color:#173fff}
+.concierge-workspace{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr);overflow:hidden}
+.concierge-conversation{display:flex;flex-direction:column;min-height:0;min-width:0}
+.concierge-messages{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#cdd8ed transparent;padding:16px 24px 20px;scroll-behavior:auto}
+.concierge-turn+.concierge-turn{margin-top:30px;padding-top:8px}
+.concierge-panel .concierge-user{width:fit-content;max-width:86%;margin:0 0 22px auto;padding:10px 17px;background:#e6edff;border-radius:20px 20px 5px 20px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.75;color:#182d53}
+.concierge-answer-row{display:flex;gap:11px;align-items:flex-start}
+.concierge-answer-row>.concierge-avatar{width:34px;height:34px;flex-basis:34px;margin-top:3px}
+.concierge-answer-content{flex:1;min-width:0}
+.concierge-answer{min-width:0;padding:13px 17px;background:#f0f3f9;border-radius:4px 18px 18px 18px;color:#23314b;font-size:clamp(16px,1.05vw,18px);line-height:1.85;overflow-wrap:anywhere}
+.concierge-answer p+p{margin-top:10px}
+.concierge-answer .concierge-answer-label{margin:0 0 7px;font-size:10px;line-height:1.5;color:#71819c;letter-spacing:.02em}
+.concierge-answer .concierge-answer-label+p{margin-top:0}
+.concierge-answer .concierge-pending-copy{color:#7888a3;font-size:14px;line-height:1.8}
+.concierge-answer p{white-space:pre-wrap}
+.concierge-answer a.concierge-inline-citation{display:inline;color:#2859d2;padding:0 2px;font:500 .77em/1.6 var(--concierge-font);text-decoration:underline;text-decoration-color:#b3c5f1;text-underline-offset:3px;white-space:nowrap}
+.concierge-answer a.concierge-inline-citation:hover{color:#123ae9;text-decoration-color:#123ae9}
+.concierge-progress{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:9px 14px;margin:12px 0 0;font-size:11px;line-height:1.7;color:#7887a0}
+.concierge-progress .concierge-turn-notice{flex-basis:100%;font-size:12px;line-height:1.8;color:#73819a}
+.concierge-stop{flex:none;border:1px solid #cad7ef;border-radius:18px;background:#fff;padding:6px 13px;font-size:12px;line-height:1.5;color:#355587;min-height:32px}
+.concierge-stop:hover{border-color:#9db7ee;background:#eff4ff}
+.concierge-progress>.concierge-suggestion{border:1px solid #cbd8f1;border-radius:20px;background:#edf3ff;padding:7px 15px;font-size:12px;line-height:1.6;color:#365c9e;min-height:36px}
+.concierge-progress>.concierge-suggestion:hover:not(:disabled){background:#e2edff;border-color:#a9c0ee}
+.concierge-recovery-actions{display:flex;flex-wrap:wrap;gap:8px}
+.concierge-retry,.concierge-local-fallback{border:1px solid #d1ddf1;border-radius:18px;background:#f6f9ff;padding:7px 13px;font-size:12px;line-height:1.5;color:#3b5e9e;min-height:33px}
+.concierge-retry:hover:not(:disabled),.concierge-local-fallback:hover:not(:disabled){background:#e8f0ff;border-color:#abc1ee}
+.concierge-panel button:disabled{cursor:default;opacity:.55}
+.concierge-panel .concierge-send:disabled{opacity:1}
+.concierge-project-card{display:flex;align-items:center;gap:18px;margin-top:20px;padding:13px;border:1px solid #dde4ef;border-radius:17px;background:#fcfdff;overflow:hidden;transition:border-color .18s,background .18s}
+.concierge-project-card:hover{border-color:#a8bfff;background:#fff}
+.concierge-project-card>img{display:block;width:58%;height:auto;max-height:155px;min-width:0;aspect-ratio:2.15;object-fit:cover;object-position:left center;border:1px solid #e6eaf3;border-radius:10px;background:white}
+.concierge-project-card>div{flex:1;min-width:0}
+.concierge-project-card h3{font:500 28px/1.3 var(--gallery-serif,"Songti SC",serif);color:#14233a}
+.concierge-project-card p{font-size:12px;line-height:1.6;color:#62718e;margin:5px 0 14px}
+.concierge-project-card span{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:500;color:#2348eb}
+.concierge-project-card span img{width:15px;height:15px}
+.concierge-citations{margin-top:8px;color:#6c7b94;font-size:12px;line-height:1.7}
+.concierge-citations>summary{display:flex;align-items:center;gap:7px;width:fit-content;min-height:32px;cursor:pointer;list-style:none;padding:3px 0}
+.concierge-citations>summary::-webkit-details-marker{display:none}
+.concierge-citations>summary>img{width:15px;height:15px}
+.concierge-citations>summary::after{content:"";width:6px;height:6px;margin-left:3px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg)}
+.concierge-citations[open]>summary::after{transform:translateY(2px) rotate(225deg)}
+.concierge-citations-list{display:flex;flex-wrap:wrap;gap:7px 13px;padding:7px 0 2px 22px}
+.concierge-citations a{color:#2b4fbe;border-bottom:1px solid #b7c8f2}
+.concierge-citations a:hover{border-color:#173fff}
+.concierge-suggestions{display:flex;flex-wrap:wrap;gap:8px;margin-top:19px}
+.concierge-suggestions button{background:#edf3ff;border:1px solid transparent;border-radius:24px;min-height:35px;padding:6px 15px;font:400 13px/1.6 var(--concierge-font);color:#405884;text-align:left}
+.concierge-suggestions button:hover{background:#e4edff;border-color:#c7d7fa}
+.concierge-followups{flex:none;display:flex;align-items:center;gap:10px;min-width:0;margin:8px 22px 0}
+.concierge-followups[hidden]{display:none}
+.concierge-followups-label{flex:none;font-size:11px;color:#75839a}
+.concierge-followups .concierge-suggestions{flex:1;min-width:0;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#d5dfef transparent;margin:0;padding:3px 2px 5px}
+.concierge-followups .concierge-suggestions button{flex:none;white-space:nowrap;min-height:32px;padding:5px 12px;font-size:12px}
+.concierge-welcome{padding:14px 5px 12px}
+.concierge-welcome>h3{font:500 clamp(25px,2vw,32px)/1.5 var(--gallery-serif,"Songti SC",serif);color:#192844;margin-bottom:12px}
+.concierge-welcome>p{font-size:14px;line-height:1.85;color:#63728c;max-width:29em}
+.concierge-panel .concierge-kicker{font:10px/1.7 var(--mono,monospace);letter-spacing:.12em;color:#6983b0;margin:0 0 21px}
+.concierge-starters{display:grid;grid-template-columns:1fr;gap:11px;margin-top:27px}
+.concierge-starters button{display:flex;align-items:center;gap:15px;width:100%;min-height:62px;padding:16px 18px;border:1px solid #dce5f6;border-radius:14px;background:#f9fbff;color:#29446f;text-align:left;font-size:14px;line-height:1.5;transition:background .18s,border-color .18s}
+.concierge-starters button:hover{background:#eff4ff;border-color:#b1c5f6}
+.concierge-starter-number{font:11px/1.5 var(--mono,monospace);letter-spacing:.06em;color:#7390c6;flex:none}
+.concierge-starter>span{flex:1;min-width:0}
+.concierge-starter>img{width:17px;height:17px;flex:none;opacity:.5}
+.concierge-form{flex:none;display:flex;align-items:flex-end;gap:10px;margin:8px 22px 18px;padding:10px 11px 10px 17px;border:1px solid #cfd9ec;border-radius:25px;background:#fff;box-shadow:0 3px 10px #304f9304}
+.concierge-form:focus-within{border-color:#9db3fb;box-shadow:0 0 0 3px #3562ff0b}
+.concierge-form textarea{display:block;flex:1;min-width:0;max-height:104px;resize:none;margin:0;padding:4px 0;border:0;background:transparent;color:#223654;font:400 14px/1.65 var(--concierge-font);outline:none;box-shadow:none;scrollbar-width:thin}
+.concierge-form textarea::placeholder{color:#8b96a9;opacity:1}
+.concierge-form textarea:focus-visible{outline:none}
+.concierge-send{display:inline-flex;align-items:center;justify-content:center;width:37px;height:37px;flex:0 0 37px;padding:8px;border:0;border-radius:13px;background:#173fff;color:white}
+.concierge-send img{width:20px;height:20px;filter:brightness(0) invert(1)}
+.concierge-send:hover:not(:disabled){background:#0630de}
+.concierge-send:disabled{background:#e0e7f4;cursor:default}
+.concierge-send:disabled img{filter:none;opacity:.45}
+.concierge-evidence{display:none;min-width:0;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:25px;background:#f2f6ff;border-left:1px solid #e0e7f5;scrollbar-width:thin}
+.concierge-evidence>h3{font:500 23px/1.5 var(--gallery-serif,"Songti SC",serif);color:#233657;margin-bottom:10px}
+.concierge-evidence>p{font-size:13px;line-height:1.8;color:#6f7e98;margin-bottom:25px}
+.concierge-evidence-link{display:block;padding:18px 0;border-top:1px solid #d9e3f5}
+.concierge-evidence-link strong{display:block;font-size:14px;font-weight:500;line-height:1.65;color:#294a8a}
+.concierge-evidence-link span{display:block;margin-top:8px;font-size:12px;line-height:1.8;color:#6b7b96}
+.concierge-evidence-link:hover strong{color:#173fff}
+.concierge-evidence-link>img{width:16px;height:16px;margin-top:12px;opacity:.55}
+.concierge-load-error{position:fixed;right:22px;top:100px;width:min(330px,calc(100vw - 44px));z-index:141;padding:17px 20px;border:1px solid #d9e2f4;border-radius:14px;background:#fafcff;box-shadow:0 12px 40px #294b841a;font:13px/1.8 var(--concierge-font);color:#566c8f}
+.concierge-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.concierge-modal{overflow:hidden}
+.concierge-expanded .concierge-panel{width:min(1040px,calc(100vw - 80px));left:50%;right:auto;top:7vh;bottom:7vh;transform:translateX(-50%)}
+.concierge-expanded .concierge-workspace{grid-template-columns:minmax(0,1.35fr) minmax(275px,.8fr)}
+.concierge-expanded .concierge-evidence{display:block}
+.concierge-expanded .concierge-head{padding-bottom:12px}
+.concierge-expanded .concierge-connection-status{padding-bottom:8px}
+@media(min-width:1400px){
+ .portfolio-header .concierge-trigger{font-size:16px}
+ .concierge-trigger .concierge-ai{font-size:13px}
+ .concierge-head__copy h2{font-size:25px}
+ .concierge-head__copy p{font-size:16px}
+ .concierge-head__copy .concierge-ai{font-size:14px}
+ .concierge-panel .concierge-connection-status{font-size:12px}
+ .concierge-icon{width:44px;height:44px}
+ .concierge-icon img,.concierge-icon svg{width:20px;height:20px}
+ .concierge-panel .concierge-user{font-size:18px}
+ .concierge-answer-row>.concierge-avatar{width:42px;height:42px;flex-basis:42px}
+ .concierge-answer{font-size:18px;line-height:1.75}
+ .concierge-answer .concierge-answer-label{font-size:11px}
+ .concierge-progress{font-size:12px}
+ .concierge-project-card h3{font-size:32px}
+ .concierge-project-card p{font-size:14px}
+ .concierge-project-card span{font-size:15px}
+ .concierge-citations{font-size:15px}
+ .concierge-suggestions button{font-size:15px;min-height:44px;padding:8px 17px}
+ .concierge-form textarea{font-size:16px}
+ .concierge-send{width:44px;height:44px;flex-basis:44px}
+ .concierge-followups-label{font-size:12px}
+ .concierge-followups .concierge-suggestions button{font-size:13px;min-height:36px}
+ .concierge-welcome>p{font-size:16px}
+ .concierge-starters button{font-size:16px}
+ .concierge-evidence-link strong{font-size:16px}
+ .concierge-evidence-link span{font-size:14px}
+}
+@media(min-width:761px) and (max-width:1199px){
+ .portfolio-header .portfolio-header__inner{padding-inline:24px;gap:18px;grid-template-columns:minmax(0,1fr) auto}
+ .portfolio-header .portfolio-header__inner .portfolio-nav{grid-column:1;justify-content:flex-start;gap:clamp(18px,2.6vw,30px)}
+ .portfolio-header .header-actions{grid-column:2;gap:18px}
+ .concierge-panel{top:92px}
+ .concierge-expanded .concierge-panel{top:6vh}
+}
+@media(max-width:760px){
+ .portfolio-header .header-actions{gap:14px;margin-left:auto}
+ .portfolio-header .concierge-trigger{min-height:42px;padding:4px 9px 4px 5px;gap:6px;font-size:12px}
+ .concierge-trigger .concierge-avatar{width:31px;height:31px;flex-basis:31px}
+ .concierge-trigger .concierge-ai{font-size:10px;padding:1px 6px}
+ .portfolio-header .header-actions .contact-trigger{font-size:12px}
+ .concierge-panel,.concierge-expanded .concierge-panel{top:var(--concierge-visible-top,0px);left:0;right:0;bottom:auto;width:100%;height:var(--concierge-visible-height,100dvh);max-height:100dvh;border:0;border-radius:0;transform:none;background:#fafcff;box-shadow:none;backdrop-filter:none;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+ .concierge-head{padding:19px 18px 9px;gap:11px;align-items:center}
+ .concierge-head>.concierge-avatar{width:42px;height:42px;flex-basis:42px}
+ .concierge-head__copy h2{font-size:23px}
+ .concierge-head__copy .concierge-ai{font-size:11px;margin-left:7px}
+ .concierge-head__copy p{font-size:12px}
+ .concierge-controls{gap:3px}
+ .concierge-icon{width:33px;height:36px}
+ .concierge-panel .concierge-connection-status{font-size:10px;margin:0 18px 10px;padding-left:53px}
+ .concierge-workspace,.concierge-expanded .concierge-workspace{display:flex;flex-direction:column}
+ .concierge-conversation{flex:1}
+ .concierge-messages{padding:14px 18px 20px}
+ .concierge-panel .concierge-user{font-size:14px;padding:10px 15px;margin-bottom:19px}
+ .concierge-answer-row{gap:8px}
+ .concierge-answer-row>.concierge-avatar{width:29px;height:29px;flex-basis:29px}
+ .concierge-answer{font-size:14px;line-height:1.9;padding:12px 14px}
+ .concierge-stop,.concierge-retry,.concierge-local-fallback{min-height:38px}
+ .concierge-project-card{gap:13px;padding:10px;margin-top:17px;border-radius:14px}
+ .concierge-project-card>img{width:51%;aspect-ratio:1.5;object-fit:cover;object-position:left top}
+ .concierge-project-card h3{font-size:26px}
+ .concierge-project-card p{font-size:11px;margin:5px 0 10px}
+ .concierge-project-card span{font-size:12px}
+ .concierge-citations{font-size:11px}
+ .concierge-suggestions{gap:7px;margin-top:17px}
+ .concierge-suggestions button{font-size:12px;padding:7px 12px;min-height:36px}
+ .concierge-welcome{padding:16px 4px 10px}
+ .concierge-welcome>h3{font-size:29px}
+ .concierge-welcome>p{font-size:14px}
+ .concierge-starters{gap:10px;margin-top:23px}
+ .concierge-starters button{min-height:58px;padding:13px 16px;font-size:14px}
+ .concierge-followups{margin-inline:16px;gap:8px}
+ .concierge-followups .concierge-suggestions button{min-height:36px}
+ .concierge-form{margin:7px 16px 12px;padding:9px 10px 9px 15px}
+ .concierge-form textarea{font-size:16px;line-height:1.5;padding-top:5px;padding-bottom:5px}
+ .concierge-evidence,.concierge-expanded .concierge-evidence{display:none}
+}
+@media(max-width:380px){
+ .portfolio-header .portfolio-header__inner{padding-inline:17px}
+ .portfolio-header .header-actions{gap:12px}
+ .concierge-trigger__label{font-size:12px}
+ .concierge-head{padding-inline:15px;gap:8px}
+ .concierge-head__copy h2{font-size:21px}
+ .concierge-head__copy .concierge-ai{font-size:10px;margin-left:5px;padding-inline:6px}
+ .concierge-head__copy p{font-size:11px}
+ .concierge-head>.concierge-avatar{width:35px;height:35px;flex-basis:35px}
+ .concierge-messages{padding-inline:15px}
+}
+@media(prefers-reduced-motion:reduce){.concierge-panel *{scroll-behavior:auto;transition:none}.concierge-trigger{transition:none}}
+@media print{.concierge-panel,.concierge-backdrop,.concierge-trigger{display:none!important}}

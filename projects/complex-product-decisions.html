@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Filter、Table 和 Side Menu 看起来是熟悉的组件。真正让基础设施产品难设计的，是对象关系、工作上下文与错误代价共同进入一个界面。">
+  <meta name="color-scheme" content="light">
+  <title>复杂度与判断 — 专业工具的复杂度，究竟藏在哪里？ — 段微微</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css?v=a28e28363f">
+  <link rel="stylesheet" href="../assets/site-chrome.css?v=7970a9ec63">
+  <link rel="stylesheet" href="../assets/gallery.css?v=ecedabe50c">
+  <link rel="stylesheet" href="../assets/portfolio-v2.css?v=db8e1cf0de">
+  <link rel="stylesheet" href="../assets/editorial-refresh.css?v=ac17979aee">
+<link rel="stylesheet" href="../assets/concierge.css?v=681d2115de"><link rel="canonical" href="https://weiweiduan.cn/projects/complex-product-decisions.html"><meta property="og:url" content="https://weiweiduan.cn/projects/complex-product-decisions.html"><meta property="og:type" content="website"><meta property="og:title" content="复杂度与判断 — 专业工具的复杂度，究竟藏在哪里？ — 段微微"><meta property="og:description" content="Filter、Table 和 Side Menu 看起来是熟悉的组件。真正让基础设施产品难设计的，是对象关系、工作上下文与错误代价共同进入一个界面。"></head>
+<body class="editorial-project editorial-essay" data-project="complex-product-decisions">
+  <a class="project-skip" href="#main">跳到正文</a>
+  <header class="portfolio-header"><div class="portfolio-header__inner"><button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">浏览</button><nav class="portfolio-nav" id="primary-navigation" aria-label="主要导航"><a href="../index.html"><span>首页</span></a><a href="../projects.html"><span>项目</span></a><a href="../insights.html" aria-current="page"><span>思考</span></a><a href="../career.html"><span>经历</span></a></nav><div class="header-actions"><div class="contact-menu" id="contact"><button type="button" class="contact-trigger" aria-expanded="false" aria-controls="contact-popover">联系 <span aria-hidden="true">↗</span></button><div id="contact-popover" class="contact-popover" aria-label="联系方式" hidden>
+    <div class="contact-options">
+      <div class="contact-method" aria-label="电话：132 6682 1218"><span class="contact-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h4l2 5-3 2c1 3 2 4 5 5l2-3 5 2v4c0 2-2 3-4 2C9 18 5 14 3 7c-1-2 1-4 3-4Z"/></svg></span><strong>132 6682 1218</strong></div>
+      <div class="contact-method" aria-label="邮箱：978278902@qq.com"><span class="contact-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span><strong>978278902@qq.com</strong></div>
+      <div class="contact-method contact-wechat" aria-label="微信"><span class="contact-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11a7 7 0 0 0-14 0c0 2 1 4 3 5l-1 3 4-2h1"/><path d="M21 15a5 5 0 0 0-10 0c0 2 2 4 4 4h2l3 1-1-3c1 0 2-1 2-2Z"/><path d="M8 10h.01M12 10h.01M14 14h.01M18 14h.01"/></svg></span><div class="contact-qr-image"><img src="../assets/contact-wechat.jpg" width="888" height="1131" alt="微信二维码，扫码添加好友"></div></div>
+    </div></div></div><button type="button" class="concierge-trigger" aria-haspopup="dialog" aria-expanded="false" aria-label="问问微微，AI 导览助手" data-concierge-root="../"><span class="concierge-avatar"><img src="../assets/characters/weiwei-pearl-blue-v1.png" alt="" width="40" height="40"></span><span class="concierge-trigger__label">问问微微</span><span class="concierge-ai">AI</span></button></div></div></header><aside class="site-sidebar"><details class="site-directory" open><summary>思考菜单</summary><nav class="nav-children" aria-label="思考内的页面"><a href="../insights.html"><span>思考概览</span></a><section class="menu-group"><h2>产品与系统</h2><ul><li><a href="../projects/complex-product-decisions.html" aria-current="page"><span>复杂度与判断</span></a></li><li><a href="../projects/systems-and-infrastructure.html"><span>结构与复用</span></a></li></ul></section><section class="menu-group"><h2>AI 与设计</h2><ul><li><a href="../projects/ai-design-infrastructure.html"><span>AI 时代的设计责任</span></a></li></ul></section><section class="menu-group"><h2>团队与人才</h2><ul><li><a href="../projects/team-operating-model.html"><span>随阶段调整协作</span></a></li><li><a href="../projects/hiring-designers.html"><span>招聘中的判断</span></a></li></ul></section></nav></details></aside>
+  <div class="gallery-daylight" aria-hidden="true"></div>
+  <main id="main">
+    <header class="project-shell project-intro" id="top">
+      <div class="project-hero">
+        <div class="project-hero__copy">
+          <div class="product-identity"><strong>复杂度与判断</strong><span class="product-tag">复杂产品 / 专业用户</span></div>
+
+          <h1>专业工具的复杂度，究竟藏在哪里？</h1>
+          <p class="project-deck">Filter、Table 和 Side Menu 看起来是熟悉的组件。真正让基础设施产品难设计的，是对象关系、工作上下文与错误代价共同进入一个界面。</p>
+          <p class="project-hero__note"><strong>写在前面</strong>从基础设施平台中的筛选、表格与多层导航出发，讨论我如何理解复杂度。文中的判断问题是对这些场景的归纳。</p>
+
+        </div>
+
+      </div>
+
+
+      <dl class="project-meta"><div><dt>主题</dt><dd>复杂产品 / 专业用户</dd></div><div><dt>阅读</dt><dd>约 4 分钟</dd></div></dl>
+
+    </header>
+    <div class="project-shell project-reading-layout">
+      <aside class="project-rail" aria-label="本页章节">
+        <nav class="project-toc" aria-label="本文脉络">
+          <p class="project-toc__title">本文脉络</p>
+          <ol><li><a data-section-link href="#complexity" aria-current="location"><span class="toc-number">01</span><span>复杂在哪里</span></a></li><li><a data-section-link href="#learning"><span class="toc-number">02</span><span>理解技术用户</span></a></li><li><a data-section-link href="#filters"><span class="toc-number">03</span><span>筛选与范围</span></a></li><li><a data-section-link href="#tables-navigation"><span class="toc-number">04</span><span>表格与导航</span></a></li><li><a data-section-link href="#principle"><span class="toc-number">05</span><span>可复用的判断</span></a></li></ol>
+          <a class="project-toc__top" href="#top">回到开头</a>
+        </nav>
+      </aside>
+      <article class="project-article" aria-label="复杂度与判断 · 思考文章">
+        <section class="project-section" id="complexity" aria-labelledby="heading-complexity"><p class="project-eyebrow">01 / 复杂在哪里</p><h2 id="heading-complexity">先找到用户需要作出的判断。</h2><p>工程专业工具中的使用者可能每天处理大量对象，在多个系统之间确认原因，还要承担误操作的后果。我的工作是把隐含的判断条件变成可见、可检查的结构。</p>
+<p>一个安全规则列表，可能同时展示来源、目的地、服务、命中次数和允许或拒绝的动作。把这些内容压进更整齐的列里，并不意味着用户更容易确认“这条规则会影响谁”。</p>
+<p>复杂度既来自信息本身，也来自信息之间的关系：同名资源可能分布在不同环境，一组对象可能属于不同业务，一次批量操作可能越过用户原本理解的范围。用户需要在这些条件下找到对象、解释状态，再决定是否行动。</p>
+<aside class="project-statement"><p>我会先问：用户此刻要找什么、比较什么、确认什么，以及判断错误的代价是什么。</p></aside></section>
+<section class="project-section" id="learning" aria-labelledby="heading-learning"><p class="project-eyebrow">02 / 理解技术用户</p><h2 id="heading-learning">理解术语，要继续追到对象之间的关系。</h2><p>刚进入 Infra 时，我需要先理解陌生的技术领域。从日志、监控、Kubernetes 等具体问题进入，再不断把它们放回产品地图，逐渐认识资源、应用、部署与观测之间的关系。这种积累让我能够把技术描述转化为使用者的任务。</p>
+<p>与专家用户沟通时，单纯询问“这个功能好不好用”容易停留在偏好。更有价值的讨论，是请对方沿真实任务解释：从哪里进入、为什么看这个字段、接下来去哪里验证。后来 Infra Design System 用户研究中的任务观察，也让我看到用户说的使用方式与实际路径之间的差距。</p>
+<p>我把这种工作理解为双向翻译：向技术同事确认系统实际如何运行，再向使用者解释什么与当前任务有关。翻译不等于把术语换成浅显的词，也要保留专业用户需要的精度。</p></section>
+<section class="project-section" id="filters" aria-labelledby="heading-filters"><p class="project-eyebrow">03 / 筛选与范围</p><h2 id="heading-filters">Filter（筛选器）背后，是集合与作用范围。</h2><figure class="project-evidence">
+          <p class="project-evidence__source">TOC v1.1 · 查询与资源上下文完整原稿</p>
+          <a class="project-evidence__preview" href="../assets/editorial/space-toc-query-main.png" target="_blank" rel="noreferrer" data-evidence-open="evidence-space-toc-query-main-16" aria-haspopup="dialog" aria-controls="evidence-space-toc-query-main-16" aria-label="放大原始图：TOC 完整查询页面，包含全局导航、资源树、字段筛选、结果表格与批量操作"><img src="../assets/editorial/space-toc-query-main.png" alt="TOC 完整查询页面，包含全局导航、资源树、字段筛选、结果表格与批量操作" width="1728" height="1512" loading="lazy" decoding="async"><span>放大查看完整原图 ↗</span></a>
+          <figcaption>完整查询原稿中，产品入口、对象树、筛选条件、结果列表与批量操作一起构成任务上下文；下方结构图提炼其中的判断关系。</figcaption>
+          <dialog class="project-lightbox" id="evidence-space-toc-query-main-16" aria-labelledby="evidence-title-space-toc-query-main-16">
+            <header><p id="evidence-title-space-toc-query-main-16">TOC v1.1 · 查询与资源上下文完整原稿</p><button type="button" data-evidence-close>关闭</button></header>
+            <p class="project-lightbox__hint">左右滑动查看完整图</p>
+            <div class="project-lightbox__image" role="region" tabindex="0" aria-label="原图，窄屏下可横向浏览"><img src="../assets/editorial/space-toc-query-main.png" alt="TOC 完整查询页面，包含全局导航、资源树、字段筛选、结果表格与批量操作" width="1728" height="1512"></div>
+            <footer><span>完整查询原稿中，产品入口、对象树、筛选条件、结果列表与批量操作一起构成任务上下文；下方结构图提炼其中的判断关系。</span><a href="../assets/editorial/space-toc-query-main.png" target="_blank" rel="noreferrer">在新标签查看原图</a></footer>
+          </dialog>
+        </figure>
+<figure class="decision-figure"><div class="mechanism mechanism--filter"><div class="mechanism-bar"><span>RESOURCE / 筛选与选择</span><span>机制示意</span></div><div class="mechanism-body"><div class="scope-strip"><span>环境：测试环境</span><span>资源范围：项目 A</span></div><div class="filter-expression"><span>状态 <b>等于</b> 运行中</span><i>AND</i><span>区域 <b>属于</b> 区域 1、区域 2</span></div><div class="selection-strip"><strong>筛选结果：18 条</strong><span>当前选中：3 条</span></div><div class="mechanism-bridge">批量操作的对象是选中的 3 条；筛选命中不等于全部被选中。</div></div></div><figcaption>依据复杂筛选场景整理的机制示意，字段与数据为示例；重点区分上下文范围、筛选条件与操作对象。</figcaption></figure>
+<p>在资源管理场景中，左侧对象树、顶部环境选择和页面内筛选可能同时生效。每个控件单独看都能理解，组合后却容易让人分不清：这个结果属于哪个范围，切换节点之后，刚才的条件还在不在。</p>
+<p>因此，筛选设计需要同时处理字段、运算符、值与作用范围。字段变化时，适用的运算符也可能变化；多条件组合后，用户需要能够读懂、修改，并在结果异常时找到原因。</p>
+<p>一个典型检查场景是批量操作：勾选当前页、勾选所有查询结果，以及仅仅筛选出一组结果，是三种不同状态。界面需要让用户清楚地辨认它们。把这个问题留到最终确认弹窗，往往已经太晚。</p>
+<div class="project-related"><a class="project-related-card" href="space.html#toc"><span class="project-related-label">资源场景</span><span class="project-related-arrow" aria-hidden="true">↗</span><strong>TOC</strong><p>查看专业查询与资源工作台怎样保留上下文。</p></a><a class="project-related-card" href="data-suite.html#access"><span class="project-related-label">权限场景</span><span class="project-related-arrow" aria-hidden="true">↗</span><strong>DataSuite</strong><p>对照可访问范围与本次查询条件的区别。</p></a></div></section>
+<section class="project-section" id="tables-navigation" aria-labelledby="heading-tables-navigation"><p class="project-eyebrow">04 / 表格与导航</p><h2 id="heading-tables-navigation">Table 与 Side Menu，让判断有连续的上下文。</h2><div class="screen-story screen-story--sequence" data-screen-story><p class="screen-story__heading">真实产品原稿 · 表格与导航中的上下文</p><div class="screen-story__controls" data-screen-controls role="group" aria-label="真实产品原稿 · 表格与导航中的上下文：选择画面" hidden><button type="button" data-screen-select="0" aria-controls="complex-table-navigation-evidence-panel-0" aria-pressed="true"><img src="../assets/editorial/insight-security-rules-full-20261103.png" alt="" width="1728" height="1705" loading="lazy"><span><b>01 / 安全规则：关联阅读来源、目的地与动作</b><small>在高密度表格中分组组织来源与目的地，保留策略身份、服务、动作和启用状态。</small></span></button><button type="button" data-screen-select="1" aria-controls="complex-table-navigation-evidence-panel-1" aria-pressed="false"><img src="../assets/editorial/space-toc-portal.png" alt="" width="1728" height="1117" loading="lazy"><span><b>02 / TOC 导航：从资源范围进入具体操作</b><small>顶部产品入口、左侧对象树、节点身份与结果区承担不同职责，操作始终保留当前资源范围。</small></span></button></div><div class="screen-story__panels"><div class="screen-story__panel" data-screen-panel id="complex-table-navigation-evidence-panel-0"><div class="screen-story__caption"><span>01</span><div><h3>安全规则：关联阅读来源、目的地与动作</h3><p>在高密度表格中分组组织来源与目的地，保留策略身份、服务、动作和启用状态。</p></div></div><figure class="project-evidence">
+          <p class="project-evidence__source">Firewall Policy Management · Security Rule 完整原稿</p>
+          <a class="project-evidence__preview" href="../assets/editorial/insight-security-rules-full-20261103.png" target="_blank" rel="noreferrer" data-evidence-open="evidence-insight-security-rules-full-20261103-17" aria-haspopup="dialog" aria-controls="evidence-insight-security-rules-full-20261103-17" aria-label="放大原始图：防火墙安全规则完整页面，筛选区下方为分组表头的高密度策略表"><img src="../assets/editorial/insight-security-rules-full-20261103.png" alt="防火墙安全规则完整页面，筛选区下方为分组表头的高密度策略表" width="1728" height="1705" loading="lazy" decoding="async"><span>放大查看完整原图 ↗</span></a>
+          <figcaption>策略、主机、来源、目的地、服务与动作需要横向关联阅读；固定身份和操作列，帮助用户在大量字段中保持定位。</figcaption>
+          <dialog class="project-lightbox" id="evidence-insight-security-rules-full-20261103-17" aria-labelledby="evidence-title-insight-security-rules-full-20261103-17">
+            <header><p id="evidence-title-insight-security-rules-full-20261103-17">Firewall Policy Management · Security Rule 完整原稿</p><button type="button" data-evidence-close>关闭</button></header>
+            <p class="project-lightbox__hint">左右滑动查看完整图</p>
+            <div class="project-lightbox__image" role="region" tabindex="0" aria-label="原图，窄屏下可横向浏览"><img src="../assets/editorial/insight-security-rules-full-20261103.png" alt="防火墙安全规则完整页面，筛选区下方为分组表头的高密度策略表" width="1728" height="1705"></div>
+            <footer><span>策略、主机、来源、目的地、服务与动作需要横向关联阅读；固定身份和操作列，帮助用户在大量字段中保持定位。</span><a href="../assets/editorial/insight-security-rules-full-20261103.png" target="_blank" rel="noreferrer">在新标签查看原图</a></footer>
+          </dialog>
+        </figure></div><div class="screen-story__panel" data-screen-panel id="complex-table-navigation-evidence-panel-1"><div class="screen-story__caption"><span>02</span><div><h3>TOC 导航：从资源范围进入具体操作</h3><p>顶部产品入口、左侧对象树、节点身份与结果区承担不同职责，操作始终保留当前资源范围。</p></div></div><figure class="project-evidence">
+          <p class="project-evidence__source">TOC v1.4 · 根节点工作台完整原稿</p>
+          <a class="project-evidence__preview" href="../assets/editorial/space-toc-portal.png" target="_blank" rel="noreferrer" data-evidence-open="evidence-space-toc-portal-18" aria-haspopup="dialog" aria-controls="evidence-space-toc-portal-18" aria-label="放大原始图：TOC 根节点完整工作台，包含产品导航、资源树、根节点身份、筛选、服务器列表和底部批量操作"><img src="../assets/editorial/space-toc-portal.png" alt="TOC 根节点完整工作台，包含产品导航、资源树、根节点身份、筛选、服务器列表和底部批量操作" width="1728" height="1117" loading="lazy" decoding="async"><span>放大查看完整原图 ↗</span></a>
+          <figcaption>根节点身份、资源统计与权限入口位于页头；结果分类和批量操作留在列表区域，让“在哪里”与“对哪些对象操作”可以一起判断。</figcaption>
+          <dialog class="project-lightbox" id="evidence-space-toc-portal-18" aria-labelledby="evidence-title-space-toc-portal-18">
+            <header><p id="evidence-title-space-toc-portal-18">TOC v1.4 · 根节点工作台完整原稿</p><button type="button" data-evidence-close>关闭</button></header>
+            <p class="project-lightbox__hint">左右滑动查看完整图</p>
+            <div class="project-lightbox__image" role="region" tabindex="0" aria-label="原图，窄屏下可横向浏览"><img src="../assets/editorial/space-toc-portal.png" alt="TOC 根节点完整工作台，包含产品导航、资源树、根节点身份、筛选、服务器列表和底部批量操作" width="1728" height="1117"></div>
+            <footer><span>根节点身份、资源统计与权限入口位于页头；结果分类和批量操作留在列表区域，让“在哪里”与“对哪些对象操作”可以一起判断。</span><a href="../assets/editorial/space-toc-portal.png" target="_blank" rel="noreferrer">在新标签查看原图</a></footer>
+          </dialog>
+        </figure></div></div><p class="screen-story__note">两张真实原稿分别呈现高密度字段的关联阅读，以及产品入口、对象树和任务视图之间的分工。</p></div>
+<dl class="project-roles"><div><dt>表格：看得见关系</dt><dd>安全规则中的来源、目的地与动作需要关联阅读。字段分组、固定识别信息、详情展开，都应围绕这一阅读顺序作选择。</dd></div><div><dt>导航：知道自己在哪里</dt><dd>全局产品导航、对象树、环境切换和页面 Tab 各有职责。切换时要明确哪些上下文跟随，哪些重新选择。</dd></div><div><dt>状态：知道接下来能做什么</dt><dd>状态名称需要与可执行动作、权限和异常原因一起理解，不能只依赖颜色帮助用户猜测。</dd></div></dl>
+<p>信息密度也需要按任务判断。对持续处理专业任务的人，隐藏关键字段可能增加反复展开与记忆的成本；对偶尔使用的人，同一套布局又可能缺少解释。我的目标是让必要的信息在需要时可用，而不是把所有页面统一做得稀疏。</p>
+<p>DataGo 的一次改版让我看到，只调整导航名称并不足够：原有结构把模型发现、编辑、保存查询和权限混在一起，消费者会遇到无法使用的编辑入口。我先区分消费者与模型维护者，再围绕各自任务重组导航，让查询回到取数的路径中。这里需要改变的是任务与角色的关系，而非单独整理菜单。</p>
+<details class="project-fold"><summary>辅助理解：表格阅读关系示意</summary><figure class="decision-figure"><div class="mechanism mechanism--dense-table"><div class="mechanism-bar"><span>SECURITY RULE / 规则阅读</span><span>机制示意</span></div><div class="mechanism-body"><div class="mechanism-table-scroll" tabindex="0" role="region" aria-label="安全规则示意表，窄屏可横向浏览"><table><thead><tr><th rowspan="2">策略 / 身份</th><th colspan="2">来源</th><th colspan="2">目的地</th><th rowspan="2">动作</th></tr><tr><th>区域</th><th>地址</th><th>区域</th><th>地址</th></tr></thead><tbody><tr><th>Rule A<small>ID: 001</small></th><td>区域 1</td><td>192.0.2.1</td><td>区域 2</td><td>198.51.100.1</td><td><b class="rule-allow">允许</b></td></tr><tr><th>Rule B<small>ID: 002</small></th><td>区域 1</td><td>192.0.2.2</td><td>区域 3</td><td>203.0.113.1</td><td><b class="rule-deny">拒绝</b></td></tr></tbody></table></div><div class="mechanism-bridge">固定策略身份 · 分组表达关系 · 把行为结果放在可对照的位置</div></div></div><figcaption>辅助机制示意：从真实安全规则表格中提炼关联阅读的难点；策略名称、地址与状态均为示例。</figcaption></figure></details>
+<div class="project-related"><a class="project-related-card" href="data-suite.html#go"><span class="project-related-label">实际设计</span><span class="project-related-arrow" aria-hidden="true">↗</span><strong>DataGo</strong><p>对照消费者和模型维护者的入口与流程。</p></a><a class="project-related-card" href="space.html#service-cmdb"><span class="project-related-label">关联阅读</span><span class="project-related-arrow" aria-hidden="true">↗</span><strong>Service CMDB</strong><p>查看同一服务如何连接不同资源与操作。</p></a></div></section>
+<section class="project-section" id="principle" aria-labelledby="heading-principle"><p class="project-eyebrow">05 / 可复用的判断</p><h2 id="heading-principle">组件规范之外，还要沉淀场景规则。</h2><p>只有列宽、间距和交互状态，还不足以指导下一位设计师处理复杂表格。更有价值的经验包括：哪些字段应该一起读，什么情况下需要对比视图，何时应把配置与结果拆开，怎样保留跨页面的任务上下文。</p>
+<p>AI 可以帮助用户把一句话转成查询条件，但查询结果仍然需要可核对。如果进一步执行动作，目标、范围与后果就更需要清楚。交互入口变了，用户需要完成的判断并没有消失。</p>
+<div class="project-related"><a class="project-related-card" href="infrad.html"><span class="project-related-label">系统实践</span><span class="project-related-arrow" aria-hidden="true">↗</span><strong>Infra Design System</strong><p>把场景规则与组件、指南和模板连接起来。</p></a></div></section>
+
+        <div class="project-article__end"><span>复杂度与判断 / END</span><a href="#top">回到开头</a></div>
+      </article>
+    </div>
+    <aside class="project-shell project-next" aria-labelledby="next-title">
+      <p class="project-eyebrow">继续阅读</p>
+      <h2 id="next-title">这些判断，需要回到真实工作中核对。</h2>
+      <p>看看跨角色访谈与任务观察怎样改变研究范围和优化优先级。</p>
+      <a href="design-practice.html">继续阅读 ↗</a>
+    </aside>
+  </main>
+  <footer class="project-shell project-footer"><a href="../insights.html">全部思考</a><span>Weiwei Duan · <span data-year></span></span></footer>
+  <script src="../assets/main.js?v=be4567e865"></script>
+  <script src="../assets/site-navigation.js?v=703596ee69"></script>
+  <script src="../assets/editorial-interactions.js?v=d24cddaad5"></script>
+<script src="../assets/concierge-boot.js?v=b23f8cbee4"></script></body>
+</html>
