@@ -93,7 +93,7 @@ if (gallery && typeof gallery.showModal === 'function') {
 const outline = document.querySelector('.page-outline');
 if (outline) {
   const disclosure = outline.querySelector('details');
-  const compact = matchMedia('(max-width:680px)');
+  const compact = matchMedia(document.body.classList.contains('resume-page') ? '(max-width:980px)' : '(max-width:680px)');
   const entries = [...outline.querySelectorAll('nav a')]
     .map(link => ({link, target: document.getElementById(link.hash.slice(1))}))
     .filter(entry => entry.target);

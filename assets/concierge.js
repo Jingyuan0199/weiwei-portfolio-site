@@ -270,7 +270,7 @@
     let query = question.toLowerCase().replace(/\s+/g, ' ');
     const sensitive = /薪[资酬]|工资|手机号以外|身份证|家庭住址|宗教|信仰|家庭情况|年龄|婚育|到岗|salary|religion|password|密钥|系统提示|system prompt/;
     if (sensitive.test(query)) return { id: 'unavailable', answer: '网站公开资料没有提供这方面的信息，我不能替微微猜测或作出承诺。涉及岗位安排或合作细节，可以直接联系她确认。', sources: [{ title: '联系微微', href: 'career.html#contact', description: '查看顶部联系卡' }], suggestions: [{ label: '先看看职业经历', query: '介绍她的职业经历' }] };
-    const explicitProject = /\bask\b|\bsmart\b|\bspace\b|datasuite|data suite|data infra|infrad|design system|设计系统|数据平台|工程平台|复杂平台|allsome|将进酒|国家公园|national parks/.test(query);
+    const explicitProject = /\bask\b|\bsmart\b|\bspace\b|datasuite|data suite|data infra|infrad|design system|设计系统|数据平台|工程平台|复杂平台|allsome|将进酒|国家公园|national parks|coze|扣子|deepseek|梁文锋|design skill|design md|设计债|ai\s*设计探索|粒子星球|mediapipe/.test(query);
     if (!explicitProject && /这个项目|这个产品|本页|这里|具体职责|具体负责|设计过程|怎么交付|如何交付|怎么做的/.test(query)) {
       const topicNames = { ai: 'Ask', 'ask-delivery': 'Ask', 'data-suite': 'DataSuite', 'design-system': 'Infra Design System' };
       const previousTopic = topicNames[lastTopic] || data().entries.find(e => e.id === lastTopic)?.title;
@@ -278,7 +278,7 @@
     }
     if (query.includes('ask') && /职责|负责|交付|设计过程|怎么做的|生产代码/.test(query)) return data().entries.find(e => e.id === 'ask-delivery');
     if (/文章|观点|怎么理解|思考/.test(query)) {
-      const articleRoutes = data().routes.filter(r => /complex-product-decisions|ai-design-infrastructure|systems-and-infrastructure|team-operating-model|hiring-designers/.test(r.href));
+      const articleRoutes = data().routes.filter(r => /when-models-plan|complex-product-decisions|ai-design-infrastructure|systems-and-infrastructure|team-operating-model|hiring-designers|design-practice/.test(r.href));
       const results = articleRoutes.map(route => ({route, value: score(query, [...route.keywords,route.title])})).filter(r => r.value > 0).sort((a,b) => b.value - a.value).slice(0,3).map(r => r.route);
       if (results.length) return { id: 'search', answer: '这些文章与这个话题相关，可以直接进入原文查看微微的思考。', sources: results, suggestions: [{label:'看看相关项目',query:'推荐一个复杂平台设计案例'}] };
     }

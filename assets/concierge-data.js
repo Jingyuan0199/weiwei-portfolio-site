@@ -1,6 +1,6 @@
 /* Generated from content/concierge.json; public preview content only. */
 window.WEIWEI_CONCIERGE_DATA = {
-  "version": "2026-11-05-ai-native-builds",
+  "version": "2026-11-05-approved-content-refresh",
   "mode": "preview",
   "defaultEntryId": "ai",
   "welcome": {
@@ -46,10 +46,10 @@ window.WEIWEI_CONCIERGE_DATA = {
         "多少年",
         "工作年限"
       ],
-      "answer": "微微是一名拥有 14 年设计经验的 Expert Designer，深耕企业级基础设施、复杂系统、设计系统与 AI 人机协作。她从纸媒与门户网站转向移动互联网产品，再进入工程与数据领域。Shopee 任期为 2018.10—2026.11，2020 年初成为 Infra 首位设计师；她既做关键产品设计，也有正式主管、虚线带队和 PIC 经验。\n\n她反复从关键设计建立全局理解，再带领设计师形成稳定支持、沉淀领域知识并交接。可以从 Ask 了解她的 AI 产品与设计实践，再看 Space 中如何支持复杂平台和团队。",
+      "answer": "微微是一名拥有 14 年设计经验的 Expert Designer，长期做企业级基础设施与复杂产品设计，也把项目经验整理成设计系统，支持团队继续工作。她从纸媒与门户网站转向移动互联网产品，再进入工程、数据与 AI 领域，既做关键产品设计，也有正式主管、虚线带队和 PIC 经验。\n\n现在，她正借助 AI 改变自己的工作方式，也从没有编程基础开始，亲手做自然漫游、古诗体验等作品。项目页展示具体工作，思考文章记录经历如何改变判断，AI 创作则讲述每个念头的起因、实现过程与不足。",
       "sources": [
         {
-          "title": "职业经历",
+          "title": "简历 · 职业经历",
           "href": "career.html#shopee",
           "description": "设计职责、团队经验与职业发展"
         },
@@ -89,27 +89,115 @@ window.WEIWEI_CONCIERGE_DATA = {
         "故障",
         "sre"
       ],
-      "answer": "Ask 是 AI 运维值班与故障处置平台，以 AI 逐步承接一线值班工作为目标。微微担任主设计师，协同 PM 定义产品流程，开展专家访谈，并设计人的授权、纠正与接管。\n\n她也先行用 AI 构建可运行、可交互的大型复杂产品高保真方案，设计成熟度接近交付标准，再结合当时生产环境与团队协作要求，整理为可持续维护的设计文件与业务组件。",
+      "answer": "微微的 AI 实践包括三部分：在 Ask 中设计人与 AI 怎样共同完成任务；尝试让 AI 使用设计系统，走过 Figma MCP、Make 和 React 几条路径，也记录了成本、质量与设计债的问题；工作之外，借助 AI 制作自然漫游、古诗体验、社区原型、小游戏和手势实验。可以从你感兴趣的一类开始看。",
       "sources": [
         {
-          "title": "产品定义",
-          "href": "projects/ask.html#definition",
-          "description": "用户、任务与核心流程的梳理"
+          "title": "Ask · AI 产品设计",
+          "href": "projects/ask.html#decisions",
+          "description": "专家怎样理解、授权、纠正和接管处理过程"
         },
         {
-          "title": "设计交付",
-          "href": "projects/ask.html#delivery",
-          "description": "从可体验方案到可维护的设计资产"
+          "title": "我把设计规范交给 AI 之后",
+          "href": "projects/ai-design-infrastructure.html#phase-one",
+          "description": "Figma MCP、Make、React 三条路径与实际限制"
+        },
+        {
+          "title": "AI 创作与实验",
+          "href": "projects/independent.html",
+          "description": "五件作品的起因、过程与可体验成果"
         }
       ],
       "suggestions": [
         {
-          "label": "她具体负责什么",
-          "query": "Ask 中微微具体负责什么，如何交付"
+          "label": "看看设计系统实验",
+          "query": "她的 Design Skill 探索遇到了哪些问题"
         },
         {
-          "label": "看看设计系统",
+          "label": "看看个人作品",
+          "query": "介绍一下微微的 AI 创作"
+        }
+      ]
+    },
+    {
+      "id": "ai-design",
+      "title": "我把设计规范交给 AI 之后",
+      "keywords": [
+        "ai 设计探索",
+        "ai设计探索",
+        "design skill",
+        "design md",
+        "设计债",
+        "设计自动化",
+        "设计规范交给",
+        "mcp",
+        "react",
+        "非标",
+        "生成成本",
+        "skill探索",
+        "skill 探索"
+      ],
+      "answer": "为了让 AI 使用 Infra Design System，微微尝试了三条路径：让 Codex 经 MCP 操作 Figma、用 Design MD 约束 Figma Make，以及让 Codex 在 React 工程中按既有组件生成界面。标准稿与非标稿的质量、生成耗时和成本、生产工程衔接，各有不同限制。这轮探索没有达到她期待的稳定程度。\n\n她在文章中进一步讨论设计债：组件用对、页面能运行之后，任务范围、状态含义、异常恢复和方案取舍仍可能没有想清楚。她愿意继续把经验写进 Skill，同时用实际任务检验生成、纠正和维护的总成本。",
+      "sources": [
+        {
+          "title": "三条实现路径",
+          "href": "projects/ai-design-infrastructure.html#phase-one",
+          "description": "从 Figma 画布、Make 方案到 React 工程"
+        },
+        {
+          "title": "被省下的工作去了哪里",
+          "href": "projects/ai-design-infrastructure.html#phase-three",
+          "description": "设计债与仍需验证的取舍"
+        }
+      ],
+      "suggestions": [
+        {
+          "label": "看设计系统建设",
           "query": "微微如何建设 Infra Design System"
+        },
+        {
+          "label": "读另一篇 AI 思考",
+          "query": "她怎么看 Smart 和 Coze 的变化"
+        }
+      ]
+    },
+    {
+      "id": "when-models-plan",
+      "title": "当模型自己会规划，哪些工作还值得我们设计？",
+      "keywords": [
+        "coze",
+        "扣子",
+        "deepseek",
+        "梁文锋",
+        "模型自己会规划",
+        "模型规划",
+        "工作流时代",
+        "追赶",
+        "长期选择",
+        "值得投入",
+        "smart和coze",
+        "smart 和 coze"
+      ],
+      "answer": "微微读到扣子部分企业套餐调整的公告后，想起了曾参与的 Smart。她在文章中回看：Smart 起步时追赶 Coze 的工作流模式，借助工程拆步组织当时还不够稳定的模型能力；项目后来没有继续推进，也让她重新审视过去方案成立的前提。\n\n同一天读到的梁文锋交流报道，又让她思考长期目标与眼前机会怎样排序。文章由这些经历追问：自己做的事情在帮助谁，哪些方法需要随着模型变化调整，以及怎样把技术带来的可能落到具体的人和事上。",
+      "sources": [
+        {
+          "title": "当时为什么需要工作流",
+          "href": "projects/when-models-plan.html#workflow-value",
+          "description": "Smart 的背景与模型能力变化带来的问题"
+        },
+        {
+          "title": "比追上一个产品更难的选择",
+          "href": "projects/when-models-plan.html#long-term-choices",
+          "description": "报道引出的个人思考与长期选择"
+        }
+      ],
+      "suggestions": [
+        {
+          "label": "看看 Smart 中的工作",
+          "query": "微微在 Smart 中负责什么"
+        },
+        {
+          "label": "看看她怎样尝试 AI",
+          "query": "她的 Design Skill 探索遇到了哪些问题"
         }
       ]
     },
@@ -132,7 +220,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "ask设计",
         "ask 设计"
       ],
-      "answer": "在 Ask 中，微微协同 PM 梳理角色、任务与核心流程，开展专家访谈，并设计人的授权、纠正和接管方式。她用 AI 构建的成果是可运行、可交互的高保真方案，设计成熟度接近交付标准。\n\n生成实现并不符合当时前端团队的生产环境要求，不能直接当作生产代码使用。后续把方案整理为设计文件、业务组件与主题，用于规范设计交付、持续修改、规范复用和团队协作。",
+      "answer": "在 Ask 中，微微以主设计师身份协同 PM 梳理角色、任务与核心流程，开展专家访谈，并设计人的授权、纠正和接管方式。从 2025 年末开始，她使用 Figma Make 制作可运行、可交互的高保真方案，设计成熟度接近交付标准。\n\n生成实现不符合当时前端团队的生产环境要求，不能直接当作生产代码使用。后续把方案整理为设计文件、业务组件与主题，用于持续修改、组件复用和团队协作。",
       "sources": [
         {
           "title": "Ask · 产品定义",
@@ -256,7 +344,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "patterns",
         "templates"
       ],
-      "answer": "微微发起并主导 Infra Design System 的设计侧建设，与前端共同维护。2021 年的记录呈现了多套规范并存的起点，以及组件进度、业务需求池和实现校对的具体工作；这些是建设过程中的证据。\n\n系统后来扩展到业务组件、Patterns、页面模板与使用指南。2024 年，她主导设计侧 v4 → v5 与 Design Tokens 体系化升级，支持多业务主题。持续的资产维护、团队指导和使用反馈，又帮助组件、主题与规则继续改进。",
+      "answer": "微微发起并主导 Infra Design System 的设计侧建设，与前端共同维护。2021 年的记录呈现了多套规范并存的起点，以及组件进度、业务需求池和实现校对的具体工作；这些是建设过程中的证据。\n\n系统后来扩展到业务组件、Patterns、页面模板与使用指南。2024 年，她主导设计侧 v4 → v5 与 Design Tokens 体系化升级，支持多业务主题。持续的资产维护、团队指导和使用反馈，又帮助组件、主题与规则继续改进。\n\n今年，她进一步尝试让 AI 使用这些积累，分别探索 Figma MCP、Make 与 React 的工作方式。这轮实验没有达到她期待的稳定程度；相关过程和对设计债的担忧，在《我把设计规范交给 AI 之后》中展开。",
       "sources": [
         {
           "title": "Infra Design System · 资产体系",
@@ -267,6 +355,11 @@ window.WEIWEI_CONCIERGE_DATA = {
           "title": "Infra Design System · 进入日常工作",
           "href": "projects/infrad.html#adoption",
           "description": "团队使用、指导与质量检查"
+        },
+        {
+          "title": "我把设计规范交给 AI 之后",
+          "href": "projects/ai-design-infrastructure.html#assets",
+          "description": "让规则被 AI 使用之后，仍需继续判断的问题"
         }
       ],
       "suggestions": [
@@ -275,8 +368,8 @@ window.WEIWEI_CONCIERGE_DATA = {
           "query": "微微在 Smart 中负责什么"
         },
         {
-          "label": "了解研究与方法",
-          "query": "微微怎样做用户研究和设计方法"
+          "label": "看看 AI 设计探索",
+          "query": "她的 Design Skill 探索遇到了哪些问题"
         }
       ]
     },
@@ -305,7 +398,7 @@ window.WEIWEI_CONCIERGE_DATA = {
       "answer": "她有不同阶段的管理与专业领导经验：在华讯投资担任 UI 设计部主管，带领 4 人团队；2020 年初成为 App Infra 首位设计师后，以虚线 Leader 身份带队，早期团队扩展至 5 人，同时承担重点产品设计、跨团队沟通和专业指导。2021 年工作记录保留了每周收需、Q4 排期、分阶段协作与项目交付跟踪。\n\n后来 App Infra 与 STO、TechOps 合为 Engineering Infrastructure，设计团队与支持范围扩大。2022 年专职 Manager 到岗后，她转为 PIC，曾与另一位 PIC 分别负责两个小组。之后随业务交接逐步聚焦设计系统、业务定制支持、专业指导与重点项目。",
       "sources": [
         {
-          "title": "职业经历 · Shopee",
+          "title": "简历 · Shopee",
           "href": "career.html#shopee",
           "description": "一线设计、团队职责与专业建设"
         },
@@ -447,7 +540,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "视频演示",
         "AI 协作开发"
       ],
-      "answer": "现在的 AI 创作与实验按页面顺序有五项：请假去公园 · 山野漫游，聚焦海南，仍在持续完善；《将进酒》，是一项可体验的四幕声画阅读实验；Allsome · 有点东西，探索公司内部的创作交流空间，目前尚未正式上线；《卷了个卷》，基于开源三消项目并借助 Codex 改造，站内视频展示个人版本的手机实玩；手势粒子星球，是由 Gemini Canvas 参与实现的三维手势交互实验。前三项提供外部体验入口，后两项视频在站内播放。\n\n微微从零编程基础起步，主动提出方向、定义体验、检查结果，并借助 AI 和开源资源把构想推进到设计、实现与调试。这里的 AI-native 描述协作创作方式，不代表每件作品都带有面向用户的 AI 功能。",
+      "answer": "这里有五项 AI 创作：山野漫游源于被国家公园项目的初心打动，海南场景可以探索，但质感、音效与动物效果仍未达到设想；《将进酒》受同事制作教辅工具启发，尝试四幕声画阅读；Allsome 希望给同事的创作一个被看见的地方，目前是交互原型，未正式上线；《卷了个卷》基于开源三消项目，借助 Codex 改造，视频展示个人版本手机实玩；手势粒子星球借助 Gemini Canvas、Three.js 与 MediaPipe 实现视觉交互实验。\n\n前三项提供外部体验入口，后两项直接播放演示视频。微微从没有编程基础开始，亲自决定做什么、怎样体验，也检查结果和不足，再借助 AI 与开源工具把构想推进到实现与调试。",
       "sources": [
         {
           "title": "AI 创作与实验总览",
@@ -485,7 +578,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "配置区",
         "agent编排"
       ],
-      "answer": "Smart 是围绕 Agent 构建、配置与测试的产品。微微的参与集中在主题指导、业务组件指导与辅助搭建、专业评审；产品一线需求和页面设计由负责同事推进。\n\n她与项目设计师一起梳理节点、资源和配置的共用结构，区分对象类型与运行状态，并通过设计系统主题承接业务差异，让团队能够继续扩展资产。",
+      "answer": "Smart 是支持 Agent 配置、工作流编排、测试与发布的平台，起步时参考了 Coze 的工作流模式。微微从设计系统侧指导主题定制，与项目设计师共建业务组件并参与专业评审；产品一线需求和页面设计由负责同事推进。\n\n她的工作围绕节点、资源与配置，区分对象类型、运行状态和可用操作。项目后来没有继续推进，她在文章中回看当时工程拆步的背景，并讨论模型能力变化后，哪些工作仍值得投入。",
       "sources": [
         {
           "title": "Smart · 业务对象与组件",
@@ -496,6 +589,11 @@ window.WEIWEI_CONCIERGE_DATA = {
           "title": "Smart · 主题与共用基础",
           "href": "projects/smart.html#theme",
           "description": "在共同语义上保留业务差异"
+        },
+        {
+          "title": "当模型自己会规划，哪些工作还值得我们设计？",
+          "href": "projects/when-models-plan.html#workflow-value",
+          "description": "从参与 Smart 的经历重新审视工作流与长期选择"
         }
       ],
       "suggestions": [
@@ -504,8 +602,8 @@ window.WEIWEI_CONCIERGE_DATA = {
           "query": "Ask 中微微具体负责什么，如何交付"
         },
         {
-          "label": "了解共用设计系统",
-          "query": "微微如何建设 Infra Design System"
+          "label": "读读工作流的反思",
+          "query": "她怎么看 Smart 和 Coze 的变化"
         }
       ]
     },
@@ -530,7 +628,7 @@ window.WEIWEI_CONCIERGE_DATA = {
       ],
       "suggestions": [
         {
-          "label": "查看完整经历",
+          "label": "查看完整简历",
           "query": "介绍微微的职业经历"
         },
         {
@@ -566,7 +664,7 @@ window.WEIWEI_CONCIERGE_DATA = {
           "description": "打开顶部联系卡"
         },
         {
-          "title": "先了解职业经历",
+          "title": "查看简历",
           "href": "career.html",
           "description": "带着具体经历与职责继续交流"
         }
@@ -606,7 +704,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "项目目录",
         "全部项目"
       ],
-      "description": "按 AI 产品、复杂平台、系统方法与个人创作浏览。"
+      "description": "按 AI 产品、工程与数据平台、系统方法和 AI 创作浏览。"
     },
     {
       "title": "思考",
@@ -616,17 +714,24 @@ window.WEIWEI_CONCIERGE_DATA = {
         "文章",
         "观点",
         "全部文章",
-        "设计思考"
+        "设计思考",
+        "AI 与时代",
+        "产品与判断",
+        "团队与方法"
       ],
-      "description": "五个主题：产品复杂度、结构复用、AI 责任、团队协作和招聘培养。"
+      "description": "七篇思考，依次围绕 AI 与时代、产品与判断、团队与方法，记录经历如何改变选择。"
     },
     {
-      "title": "经历与工作方式",
+      "title": "简历与专业能力",
       "href": "career.html",
       "keywords": [
         "职业",
         "经历",
         "履历",
+        "简历",
+        "PDF",
+        "下载简历",
+        "下载 PDF",
         "教育",
         "学校",
         "中南大学",
@@ -648,7 +753,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "邮箱",
         "个人介绍"
       ],
-      "description": "职业经历、团队实践、共事方式与联系入口。"
+      "description": "专业能力、职业与教育经历、团队实践，以及 PDF 简历下载入口。"
     },
     {
       "title": "让 AI 逐步承接值班工作，让人掌握关键判断。",
@@ -700,7 +805,7 @@ window.WEIWEI_CONCIERGE_DATA = {
       "description": "Infra Design System 是面向企业级产品的设计系统，连接组件、业务模式、页面模板与使用指南。通过体系化的 Design Tokens 支持跨产品复用和多业务主题，让设计、产品与前端能够在共同基础上持续工作。"
     },
     {
-      "title": "让 Agent 的业务语义，进入共用组件与主题。",
+      "title": "让 Agent 构建中的对象与状态，在组件里表达清楚。",
       "href": "projects/smart.html",
       "keywords": [
         "Smart",
@@ -711,7 +816,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "主题指导",
         "业务组件"
       ],
-      "description": "Smart 是 AI Agent 构建平台，支持配置、编排、测试与发布。我从设计系统侧指导主题定制，辅助项目设计师共建业务组件，让节点、资源与配置既保留业务含义，也能沿共同基础继续扩展。"
+      "description": "Smart 起步时参考 Coze 的工作流模式。微微从设计系统侧指导主题定制、共建业务组件并参与评审，记录节点、资源与配置中的具体判断。"
     },
     {
       "title": "在成熟数据平台上，建立专业设计支持。",
@@ -731,24 +836,7 @@ window.WEIWEI_CONCIERGE_DATA = {
       "description": "DataSuite 是数据开发、分析与治理平台，由 Shopee Data Infrastructure 建设。我接手设计支持时，平台已有完整的产品体系和界面；工作重点是在既有产品与工程约束下改善复杂任务及跨产品体验。"
     },
     {
-      "title": "从用户的真实任务，走到有依据的设计判断。",
-      "href": "projects/design-practice.html",
-      "keywords": [
-        "研究",
-        "用研",
-        "用户研究",
-        "访谈",
-        "体验度量",
-        "自查",
-        "Design Prephase",
-        "设计定义",
-        "需求整理",
-        "工作流"
-      ],
-      "description": "已执行的设计系统官网研究，以及团队共同建设的体验质量方法与 Design Prephase 最佳实践。"
-    },
-    {
-      "title": "工作之外，继续把想法做出来。",
+      "title": "把好奇，做成可以体验的作品。",
       "href": "projects/independent.html",
       "keywords": [
         "个人创作",
@@ -761,9 +849,60 @@ window.WEIWEI_CONCIERGE_DATA = {
         "诗歌",
         "国家公园",
         "national parks",
-        "AI 协作开发"
+        "AI 协作开发",
+        "AI 创作",
+        "AI-Native Builds",
+        "手势粒子星球",
+        "Gemini",
+        "Three.js",
+        "MediaPipe",
+        "视频演示"
       ],
-      "description": "四件作品展示从构想到可体验产品的过程。"
+      "description": "五件 AI 创作的起因、实现过程与不足：自然漫游、古诗体验、社区原型、微信小游戏和手势粒子星球。"
+    },
+    {
+      "href": "projects/when-models-plan.html",
+      "keywords": [
+        "AI 与时代",
+        "AI",
+        "Coze",
+        "扣子",
+        "Smart",
+        "DeepSeek",
+        "梁文锋",
+        "工作流",
+        "模型规划",
+        "追赶",
+        "长期选择"
+      ],
+      "title": "当模型自己会规划，哪些工作还值得我们设计？",
+      "description": "从 Smart 追赶 Coze 的经历，到读到 DeepSeek 报道后的触动，重新想想有限的时间应该投向哪里。"
+    },
+    {
+      "title": "我把设计规范交给 AI 之后",
+      "href": "projects/ai-design-infrastructure.html",
+      "keywords": [
+        "AI",
+        "设计责任",
+        "AI工作流",
+        "AI 工作流",
+        "规则",
+        "上下文",
+        "Skill",
+        "MCP",
+        "原型",
+        "代码",
+        "人机协作",
+        "AI 与时代",
+        "Design MD",
+        "Figma Make",
+        "React",
+        "设计债",
+        "非标",
+        "生成成本",
+        "AI 设计探索"
+      ],
+      "description": "试过 Figma MCP、Make 和 React 三条路径，仍没有得到期待的自动化方案。那些没能交出去的取舍，让我开始担心设计债。"
     },
     {
       "title": "专业工具的复杂度，究竟藏在哪里？",
@@ -778,9 +917,10 @@ window.WEIWEI_CONCIERGE_DATA = {
         "Filter",
         "Table",
         "Side Menu",
-        "导航"
+        "导航",
+        "产品与判断"
       ],
-      "description": "Filter、Table 和 Side Menu 看起来是熟悉的组件。真正让基础设施产品难设计的，是对象关系、工作上下文与错误代价共同进入一个界面。"
+      "description": "从 DataGo 的角色划分到 TOC 的操作范围，沿着人的工作理解页面为什么复杂。"
     },
     {
       "title": "Design System 与 Infrastructure，都在为上层工作建立基础。",
@@ -794,27 +934,10 @@ window.WEIWEI_CONCIERGE_DATA = {
         "Infrastructure",
         "Design System",
         "抽象",
-        "治理"
+        "治理",
+        "产品与判断"
       ],
-      "description": "从工程平台与设计系统的实践出发，讨论哪些能力值得共用、哪些业务差异需要保留，以及存量产品和维护成本如何影响选择。"
-    },
-    {
-      "title": "AI 加速了产出，设计师要对什么负责？",
-      "href": "projects/ai-design-infrastructure.html",
-      "keywords": [
-        "AI",
-        "设计责任",
-        "AI工作流",
-        "AI 工作流",
-        "规则",
-        "上下文",
-        "Skill",
-        "MCP",
-        "原型",
-        "代码",
-        "人机协作"
-      ],
-      "description": "在 Ask，我设计 AI 如何承接值班任务，也用 AI 构建复杂产品高保真方案。产品判断、设计交付与生产实现，各自需要什么证据？"
+      "description": "公共组件应该承接多少差异？从 InfraD 与 DataSuite 的实践，讨论共用、迁移和持续维护。"
     },
     {
       "title": "团队的工作方式，也要随业务阶段改变。",
@@ -830,9 +953,10 @@ window.WEIWEI_CONCIERGE_DATA = {
         "培养",
         "带教",
         "公共人力池",
-        "管理"
+        "管理",
+        "团队与方法"
       ],
-      "description": "多条产品线同时推进时，怎样让需求、人力与交付保持衔接？从早期 App Infra 的协作记录出发，回看团队分工、质量支持和职责变化。"
+      "description": "从早期五人团队的收需与排期，到后来的分组支持，记录任务怎样安排、知识怎样交接。"
     },
     {
       "title": "招聘时，怎样识别复杂产品设计能力？",
@@ -846,9 +970,28 @@ window.WEIWEI_CONCIERGE_DATA = {
         "选人",
         "培养",
         "150",
-        "职级"
+        "职级",
+        "团队与方法"
       ],
-      "description": "结合 150 场校招与社招面试，观察候选人如何理解陌生领域、解释真实贡献、比较方案，并判断能力与岗位是否匹配。"
+      "description": "两类笔试曾改变我的面谈判断。沿着候选人的实际做法，重新理解能力与岗位的匹配。"
+    },
+    {
+      "title": "从用户的真实任务，走到有依据的设计判断。",
+      "href": "projects/design-practice.html",
+      "keywords": [
+        "研究",
+        "用研",
+        "用户研究",
+        "访谈",
+        "体验度量",
+        "自查",
+        "Design Prephase",
+        "设计定义",
+        "需求整理",
+        "工作流",
+        "团队与方法"
+      ],
+      "description": "一次官网研究，为什么最后走进了 Figma？从具体任务出发，把发现变成下一轮设计的输入。"
     }
   ]
 };

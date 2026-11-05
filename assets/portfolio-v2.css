@@ -220,6 +220,8 @@ body .portfolio-header{background:rgba(247,250,255,.78);backdrop-filter:blur(14p
 .project-demo{margin:28px 0}
 .project-demo>a{display:block;color:#315da0}
 .project-demo img{display:block;width:100%;height:auto;border-radius:8px}
+.project-demo--cropped .project-demo__crop{display:block;width:100%;aspect-ratio:3/2;overflow:hidden;border-radius:8px}
+.project-demo--cropped .project-demo__crop>img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .project-demo a>span{display:inline-block;margin-top:14px;font-size:14px;border-bottom:1px solid #bfd0ef;padding-bottom:4px}
 .project-demo a:focus-visible{outline:2px solid #174be5;outline-offset:6px}
 .project-demo figcaption{margin-top:12px;font:12px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;color:#73829b}
