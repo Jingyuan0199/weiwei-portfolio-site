@@ -150,9 +150,6 @@ a:hover .entrance-arrow{transform:translateX(7px)}
 .editorial-project .project-asset-map__lane>p{font-family:var(--gallery-serif);font-size:23px;color:#17243d;margin:0 0 13px}
 .editorial-project .project-asset-map dt{font-size:14px;color:#4b6386}
 .editorial-project .project-asset-map dd{font-size:13px;color:#7b8ba3;line-height:1.8}
-.editorial-project .project-next{padding:30px 0 70px;border-color:var(--gallery-line)}
-.editorial-project .project-next h2{font:600 38px/1.5 var(--gallery-serif)}
-.editorial-project .project-footer{border:0;padding-bottom:45px}
 .editorial-project .project-related{background:rgba(255,255,255,.3)}
 .editorial-project .project-related a{background:transparent;border-color:var(--gallery-line)}
 .editorial-project .project-related strong{font-family:var(--gallery-serif)}

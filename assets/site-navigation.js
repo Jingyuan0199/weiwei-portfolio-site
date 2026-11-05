@@ -27,6 +27,36 @@
   openContactAnchor();window.addEventListener('hashchange',openContactAnchor);
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&popover&&!popover.hidden){setContact(false);trigger.focus();}});
   document.addEventListener('click',event=>{if(!contact?.contains(event.target))setContact(false);});
+  const copyTimers=new WeakMap();
+  contact?.addEventListener('click',async event=>{
+    const button=event.target.closest('[data-copy-text]');
+    if(!button)return;
+    let copied=false;
+    try{
+      if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(button.dataset.copyText);copied=true;}
+    }catch{}
+    if(!copied){
+      const field=document.createElement('textarea');
+      field.value=button.dataset.copyText;
+      field.setAttribute('readonly','');
+      field.style.position='fixed';
+      field.style.opacity='0';
+      document.body.append(field);
+      field.select();
+      try{copied=document.execCommand('copy');}catch{}
+      field.remove();
+      button.focus();
+    }
+    clearTimeout(copyTimers.get(button));
+    button.textContent=copied?'已复制':'复制失败';
+    button.dataset.copyState=copied?'success':'error';
+    button.setAttribute('aria-label',copied?button.dataset.copyKind+'已复制':'无法复制'+button.dataset.copyKind);
+    copyTimers.set(button,setTimeout(()=>{
+      button.textContent='复制';
+      delete button.dataset.copyState;
+      button.setAttribute('aria-label','复制'+(button.dataset.copyKind==='电话'?'电话号码':'邮箱地址'));
+    },1500));
+  });
   document.addEventListener('click',event=>{
     const link=event.target.closest('a[href]');
     if(!link)return;

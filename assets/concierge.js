@@ -16,11 +16,17 @@
     return node;
   };
   const icon = name => {
-    if (name === 'rotate-ccw') {
+    const strokes = {
+      'rotate-ccw': ['M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8','M3 3v5h5'],
+      'maximize-2': ['M15 3h6v6','M21 3l-7 7','M9 21H3v-6','M3 21l7-7'],
+      'minimize-2': ['M4 14h6v6','M10 14l-7 7','M20 10h-6V4','M14 10l7-7'],
+      x: ['M18 6 6 18','M6 6l12 12']
+    };
+    if (strokes[name]) {
       const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
       svg.setAttribute('viewBox','0 0 24 24'); svg.setAttribute('fill','none'); svg.setAttribute('stroke','currentColor');
-      svg.setAttribute('stroke-width','1.7'); svg.setAttribute('stroke-linecap','round'); svg.setAttribute('stroke-linejoin','round'); svg.setAttribute('aria-hidden','true');
-      for (const d of ['M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8','M3 3v5h5']) {
+      svg.setAttribute('stroke-width','2'); svg.setAttribute('stroke-linecap','round'); svg.setAttribute('stroke-linejoin','round'); svg.setAttribute('aria-hidden','true');
+      for (const d of strokes[name]) {
         const path = document.createElementNS('http://www.w3.org/2000/svg','path'); path.setAttribute('d',d); svg.append(path);
       }
       return svg;

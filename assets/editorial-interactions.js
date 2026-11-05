@@ -121,21 +121,52 @@ if (outline) {
   updateOutline();
 }
 
-// Creation cards open a focused image presentation without a long case-study page.
+// Creation cards open videos directly; the href remains a no-JS video fallback.
 (() => {
-  document.querySelectorAll('[data-creative-open]').forEach(link => {
-    const dialog = document.getElementById(link.dataset.creativeOpen);
-    if (!dialog || typeof dialog.showModal !== 'function') return;
+  document.querySelectorAll('[data-creative-video-open]').forEach(link => {
+    const dialog = document.getElementById(link.dataset.creativeVideoOpen);
+    const video = dialog?.querySelector('video');
+    if (!dialog || !video || typeof dialog.showModal !== 'function') return;
+    let opener = null;
     link.addEventListener('click', event => {
       if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
-      event.preventDefault();dialog.showModal();
+      event.preventDefault();
+      document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); });
+      opener = link;
+      const error = dialog.querySelector('.creative-video-error');
+      if (error) error.hidden = true;
+      video.currentTime = 0;
+      dialog.showModal();
+      const playback = video.play();
+      if (playback?.catch) playback.catch(() => {});
     });
-  });
-  document.querySelectorAll('.creative-dialog').forEach(dialog => {
     dialog.querySelector('[data-creative-close]').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', event => {
       const bounds=dialog.getBoundingClientRect();
       if(event.target===dialog&&(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)) dialog.close();
+    });
+    dialog.addEventListener('close', () => {
+      video.pause();
+      video.currentTime = 0;
+      opener?.focus({preventScroll:true});
+      opener = null;
+    });
+    video.addEventListener('error', () => {
+      const error = dialog.querySelector('.creative-video-error');
+      if (error) error.hidden = false;
+    });
+  });
+  document.querySelectorAll('.creative-dialog:not(.creative-dialog--video)').forEach(dialog => {
+    dialog.querySelector('[data-creative-close]')?.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => {
+      const bounds=dialog.getBoundingClientRect();
+      if(event.target===dialog&&(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)) dialog.close();
+    });
+  });
+  document.querySelectorAll('.project-video-demo video').forEach(video => {
+    video.addEventListener('error', () => {
+      const error = video.closest('.project-video-demo')?.querySelector('.project-video-error');
+      if (error) error.hidden = false;
     });
   });
 })();

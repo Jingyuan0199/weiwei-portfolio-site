@@ -1,6 +1,6 @@
 /* Generated from content/concierge.json; public preview content only. */
 window.WEIWEI_CONCIERGE_DATA = {
-  "version": "2026-11-03-annotations-31",
+  "version": "2026-11-05-ai-native-builds",
   "mode": "preview",
   "defaultEntryId": "ai",
   "welcome": {
@@ -256,7 +256,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "patterns",
         "templates"
       ],
-      "answer": "微微发起并主导 Infra Design System 的设计侧建设，与前端共同维护。从组件、业务模式、页面模板到使用指南，系统帮助不同产品共用基础，并通过 Design Tokens 支持多业务主题。\n\n她的工作也包括设计资产维护、团队指导、评审与使用支持：把产品实践和设计师的反馈带回系统，让组件、主题与规则持续演进。",
+      "answer": "微微发起并主导 Infra Design System 的设计侧建设，与前端共同维护。2021 年的记录呈现了多套规范并存的起点，以及组件进度、业务需求池和实现校对的具体工作；这些是建设过程中的证据。\n\n系统后来扩展到业务组件、Patterns、页面模板与使用指南。2024 年，她主导设计侧 v4 → v5 与 Design Tokens 体系化升级，支持多业务主题。持续的资产维护、团队指导和使用反馈，又帮助组件、主题与规则继续改进。",
       "sources": [
         {
           "title": "Infra Design System · 资产体系",
@@ -302,7 +302,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "管理过团队",
         "带人"
       ],
-      "answer": "她有不同阶段的管理与专业领导经验：在华讯投资担任 UI 设计部主管，带领 4 人团队；在 Infra 早期以虚线 Leader 身份带队，团队扩展至 5 人，同时承担重点产品设计、跨团队沟通和专业指导。\n\n公司工程基建团队整合后，设计团队随之扩张，支持范围延伸至企业级数据基础设施、AI 等领域。专职 Manager 到岗后，她转为 PIC；在不同业务先独立处理关键设计，建立全局认知，再带领成员形成稳定支持，沉淀后交给后续 PIC 和设计师。后期聚焦设计系统、业务定制支持、专业指导及重点项目。正式主管、虚线带队与 PIC 的责任范围分别对应不同阶段。",
+      "answer": "她有不同阶段的管理与专业领导经验：在华讯投资担任 UI 设计部主管，带领 4 人团队；2020 年初成为 App Infra 首位设计师后，以虚线 Leader 身份带队，早期团队扩展至 5 人，同时承担重点产品设计、跨团队沟通和专业指导。2021 年工作记录保留了每周收需、Q4 排期、分阶段协作与项目交付跟踪。\n\n后来 App Infra 与 STO、TechOps 合为 Engineering Infrastructure，设计团队与支持范围扩大。2022 年专职 Manager 到岗后，她转为 PIC，曾与另一位 PIC 分别负责两个小组。之后随业务交接逐步聚焦设计系统、业务定制支持、专业指导与重点项目。",
       "sources": [
         {
           "title": "职业经历 · Shopee",
@@ -414,39 +414,50 @@ window.WEIWEI_CONCIERGE_DATA = {
     },
     {
       "id": "creative",
-      "title": "工作之外的创作",
+      "title": "AI 创作与实验",
       "keywords": [
+        "ai 创作",
+        "ai-native",
+        "ai native builds",
+        "AI 协作",
+        "开源实践",
+        "工作之外的创作",
         "个人创作",
         "创作",
         "独立作品",
         "个人项目",
-        "兴趣",
         "allsome",
         "有点东西",
+        "饼交所",
         "将进酒",
         "诗歌",
         "卷了个卷",
         "小游戏",
-        "紫微",
-        "紫薇",
-        "full愈",
-        "full 愈",
-        "个人作品",
-        "独立创作",
+        "请假去公园",
+        "山野漫游",
         "国家公园",
-        "national parks"
+        "national parks",
+        "手势粒子星球",
+        "粒子星球",
+        "gemini",
+        "gemini canvas",
+        "three.js",
+        "mediapipe",
+        "手势",
+        "视频演示",
+        "AI 协作开发"
       ],
-      "answer": "工作之外，她也把想法做成具体的设计与体验。Allsome 探索创作与经验的发现和分享；《将进酒》结合诗文、画面、朗读和动效；《卷了个卷》展示办公室主题消除游戏的个人设计版本。\n\n「请假去公园」把自然影像、观察内容与第一人称漫游串成线上探索，目前围绕海南热带雨林持续完善。紫微小星星与 Full 愈则是专业工具和服务产品的设计探索。个人创作不限定题材、领域或形式，会持续增加新的尝试。",
+      "answer": "现在的 AI 创作与实验按页面顺序有五项：请假去公园 · 山野漫游，聚焦海南，仍在持续完善；《将进酒》，是一项可体验的四幕声画阅读实验；Allsome · 有点东西，探索公司内部的创作交流空间，目前尚未正式上线；《卷了个卷》，基于开源三消项目并借助 Codex 改造，站内视频展示个人版本的手机实玩；手势粒子星球，是由 Gemini Canvas 参与实现的三维手势交互实验。前三项提供外部体验入口，后两项视频在站内播放。\n\n微微从零编程基础起步，主动提出方向、定义体验、检查结果，并借助 AI 和开源资源把构想推进到设计、实现与调试。这里的 AI-native 描述协作创作方式，不代表每件作品都带有面向用户的 AI 功能。",
       "sources": [
         {
-          "title": "个人创作与实验",
+          "title": "AI 创作与实验总览",
           "href": "projects.html#creative",
-          "description": "直接浏览作品与体验入口"
+          "description": "五项作品与直接体验入口"
         },
         {
-          "title": "个人创作与实验",
+          "title": "AI 创作记录",
           "href": "projects/independent.html",
-          "description": "浏览创作介绍与体验入口"
+          "description": "创作动机、制作过程与真实不足"
         }
       ],
       "suggestions": [
@@ -746,16 +757,13 @@ window.WEIWEI_CONCIERGE_DATA = {
         "有点东西",
         "将进酒",
         "卷了个卷",
-        "紫微小星星",
-        "紫薇",
-        "Full 愈",
-        "Full愈",
         "游戏",
         "诗歌",
         "国家公园",
-        "national parks"
+        "national parks",
+        "AI 协作开发"
       ],
-      "description": "不同题材的个人设计与体验实践，分别说明设计选择、当前状态与体验入口。"
+      "description": "四件作品展示从构想到可体验产品的过程。"
     },
     {
       "title": "专业工具的复杂度，究竟藏在哪里？",
@@ -824,7 +832,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "公共人力池",
         "管理"
       ],
-      "description": "从关键设计建立业务理解，再带领成员形成稳定支持，沉淀知识与协作方式，让后续负责人能够接续。团队机制需要同时回应产品阶段、成员能力与职责变化。"
+      "description": "多条产品线同时推进时，怎样让需求、人力与交付保持衔接？从早期 App Infra 的协作记录出发，回看团队分工、质量支持和职责变化。"
     },
     {
       "title": "招聘时，怎样识别复杂产品设计能力？",
