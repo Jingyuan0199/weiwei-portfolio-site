@@ -1,0 +1,292 @@
+/* Canonical website typography. Load after page styles.
+ * Text roles share one scale across home, directories, stories and web résumé.
+ * Embedded product demonstrations, the badge and the PDF keep their own type.
+ */
+:root {
+  --type-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --type-serif: var(--gallery-serif, "Bodoni 72", "Songti SC", STSong, "Times New Roman", serif);
+  --type-display: 56px;
+  --type-page: 44px;
+  --type-section: 28px;
+  --type-card: 22px;
+  --type-subheading: 20px;
+  --type-lead: 18px;
+  --type-body: 17px;
+  --type-secondary: 15px;
+  --type-control: 14px;
+  --type-caption: 13px;
+  --type-meta: 12px;
+  --type-nav: 15px;
+  --type-metric: 44px;
+  --leading-body: 1.8;
+  --leading-heading: 1.5;
+}
+
+body.home-page,
+body.editorial-project {
+  font-family: var(--type-sans);
+}
+
+/* Navigation is one role, wherever it appears. Keep secondary labels smaller. */
+body .portfolio-header .portfolio-header__inner .portfolio-nav,
+body .portfolio-header .portfolio-header__inner .portfolio-nav a,
+body .portfolio-header .portfolio-header__inner .navigation-toggle,
+body .site-directory > .nav-children a,
+body .portfolio-header .contact-trigger {
+  font-family: var(--type-sans);
+  font-size: var(--type-nav);
+  line-height: 1.5;
+}
+
+body .site-directory > .nav-children small,
+body .menu-group h2 {
+  font-size: var(--type-meta);
+  line-height: 1.5;
+}
+
+body .page-outline nav > a,
+body .page-outline nav > a.outline-child,
+body.editorial-project .project-toc a,
+body.resume-page .page-outline nav > a,
+body.resume-page .page-outline nav > a.outline-child {
+  font-size: var(--type-caption);
+  line-height: 1.65;
+}
+
+/* Shared title hierarchy; the landing headline is the sole display exception. */
+body.home-v2 .landing-copy h1 {
+  font: 600 var(--type-display)/1.3 var(--type-serif);
+  letter-spacing: -.025em;
+}
+
+body.home-page .overview-intro h1,
+body.editorial-project .project-hero h1,
+body.resume-page .resume-intro h1 {
+  font: 600 var(--type-page)/1.4 var(--type-serif);
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+
+body.home-page .overview-section > h2,
+body.home-page #creative.project-family > h2,
+body.editorial-project .project-section > h2,
+body.resume-page .resume-section-title,
+body.resume-page .resume-bottom-grid .resume-section-title {
+  font: 600 var(--type-section)/var(--leading-heading) var(--type-serif);
+  letter-spacing: -.015em;
+}
+
+body.home-page .insight-copy h2,
+body.home-page .case-thesis,
+body.home-page .method-entry h3,
+body.home-page #creative .creative-gallery--compact .creative-copy h3,
+body.resume-page .resume-strength h3,
+body.resume-page .resume-team > h3 {
+  font: 600 var(--type-card)/var(--leading-heading) var(--type-serif);
+  letter-spacing: 0;
+}
+
+body.editorial-project .project-section > h3,
+body.resume-page .resume-history-copy > h3,
+body.resume-page .resume-education article > h3 {
+  font: 600 var(--type-subheading)/var(--leading-heading) var(--type-serif);
+  letter-spacing: 0;
+}
+
+body.home-page .project-family .case-name > span:first-child {
+  font: 600 var(--type-section)/var(--leading-heading) var(--type-serif);
+  letter-spacing: -.015em;
+}
+
+/* Main reading text: no font size changes simply because the page changes. */
+body.home-v2 .landing-description,
+body.home-page .overview-intro > p:not(.eyebrow),
+body.home-page .section-lead,
+body.home-page #creative.project-family > .section-lead,
+body.home-page .insight-copy > p:not(.eyebrow),
+body.editorial-project .project-section > p:not(.project-eyebrow),
+body.editorial-project .project-section > ul,
+body.editorial-project .project-section > ol,
+body.editorial-project .project-hero__note,
+body.resume-page .resume-main,
+body.resume-page .resume-summary,
+body.resume-page .resume-strength p,
+body.resume-page .resume-context p,
+body.resume-page .resume-project-copy > p,
+body.resume-page .resume-team > p,
+body.resume-page .resume-history-description {
+  font-family: var(--type-sans);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  letter-spacing: 0;
+}
+
+body.editorial-project .project-deck {
+  font-size: var(--type-lead);
+  line-height: var(--leading-body);
+}
+
+body.home-v2 .landing-specialty {
+  font: 500 var(--type-card)/1.5 var(--type-serif);
+  letter-spacing: 0;
+}
+
+body.home-page .project-index span {
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+
+body.home-page .case-role,
+body.home-page .method-entry p,
+body.home-page .creative-work p,
+body.home-page #creative .creative-gallery--compact .creative-description,
+body.home-page .starting-point,
+body.editorial-project .project-fold p,
+body.editorial-project .project-fold .project-roles,
+body.editorial-project .project-meta dd,
+body.resume-page .resume-details-body,
+body.resume-page .resume-history-copy > p,
+body.resume-page .resume-education-fields dd,
+body.resume-page .resume-coursework-intro,
+body.resume-page .resume-coursework > ul > li {
+  font-family: var(--type-sans);
+  font-size: var(--type-secondary);
+  line-height: var(--leading-body);
+}
+
+/* Captions and metadata stay readable without competing with the narrative. */
+body.home-page .eyebrow,
+body.home-page .project-index small,
+body.home-page .project-family .product-tag,
+body.home-page #creative .creative-gallery--compact .creative-highlights li,
+body.editorial-project .project-meta dt,
+body.editorial-project .project-evidence__source,
+body.editorial-project .screen-story .project-evidence__source {
+  font-size: var(--type-meta);
+  line-height: 1.6;
+}
+
+body.editorial-project .project-section > .project-eyebrow,
+body.editorial-project .project-evidence > figcaption,
+body.editorial-project .screen-story .project-evidence > figcaption,
+body.editorial-project .project-demo figcaption,
+body.editorial-project .project-video-demo figcaption,
+body.resume-page .resume-history-item > time,
+body.resume-page .resume-education article > time {
+  font-size: var(--type-caption);
+  line-height: 1.7;
+}
+
+body.home-page .insight-read,
+body.home-page .case-actions a,
+body.home-page .creative-actions a,
+body.editorial-project .case-actions a,
+body.editorial-project .project-fold summary,
+body.resume-page .resume-details summary,
+body.resume-page .resume-project-link,
+body.resume-page .resume-coursework > h4 {
+  font-size: var(--type-control);
+  line-height: 1.6;
+}
+
+/* Résumé: fit the shared scale while retaining its editorial composition. */
+body.resume-page .resume-role {
+  font: 600 24px/1.5 var(--type-serif);
+}
+
+body.resume-page .resume-stat strong {
+  font: 600 var(--type-metric)/1.15 var(--type-serif);
+  letter-spacing: -.02em;
+}
+
+body.resume-page .resume-stat > div > span {
+  font: 600 var(--type-subheading)/1.5 var(--type-serif);
+}
+
+body.resume-page .resume-stat p,
+body.resume-page .resume-project-name > p {
+  font-size: var(--type-secondary);
+  line-height: 1.65;
+}
+
+body.resume-page .resume-section-title small,
+body.resume-page .resume-bottom-grid .resume-section-title small {
+  font: 500 var(--type-lead)/1.5 var(--type-serif);
+}
+
+body.resume-page .resume-bottom-grid > section {
+  container: resume-column / inline-size;
+}
+
+body.resume-page .resume-bottom-grid .resume-section-title {
+  white-space: nowrap;
+}
+
+body.resume-page .resume-bottom-grid .resume-section-title::after {
+  min-width: 0;
+  margin-left: 0;
+}
+
+@container resume-column (max-width: 285px) {
+  body.resume-page .resume-bottom-grid .resume-section-title {
+    display: block;
+  }
+  body.resume-page .resume-bottom-grid .resume-section-title small {
+    display: block;
+    font-size: var(--type-control);
+    margin-top: 2px;
+  }
+  body.resume-page .resume-bottom-grid .resume-section-title::after {
+    display: none;
+  }
+}
+
+body.resume-page .resume-employer-heading h3 {
+  font: 600 32px/1.4 var(--type-serif);
+}
+
+body.resume-page .resume-project-name h4 {
+  font: 600 var(--type-section)/1.4 var(--type-serif);
+  letter-spacing: -.015em;
+}
+
+body.resume-page .resume-project-copy h5 {
+  font-size: var(--type-card);
+}
+
+body.resume-page .resume-project-index {
+  font-size: var(--type-metric);
+  letter-spacing: -.025em;
+}
+
+body.resume-page .resume-strength {
+  /* h3 has a -3px top margin; dot and rule share its line-box centre. */
+  --resume-strength-marker-center: calc(var(--type-card) * var(--leading-heading) / 2 - 3px);
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --type-display: 48px;
+    --type-page: 40px;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --type-display: 38px;
+    --type-page: 32px;
+    --type-section: 24px;
+    --type-card: 20px;
+    --type-subheading: 18px;
+    --type-lead: 17px;
+    --type-body: 16px;
+    --type-metric: 40px;
+  }
+
+  body.resume-page .resume-role { font-size: 22px; }
+  body.resume-page .resume-employer-heading h3 { font-size: 28px; }
+  body.resume-page .resume-section-title small,
+  body.resume-page .resume-bottom-grid .resume-section-title small { font-size: 15px; }
+  /* Desktop editorial breaks must not leave one Chinese character on mobile. */
+  body.editorial-project .project-hero h1 br { display: none; }
+}

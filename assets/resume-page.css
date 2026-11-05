@@ -94,23 +94,23 @@ body.resume-page {
 .resume-page .resume-download {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  min-height: 48px;
-  padding: 12px 28px;
-  border: 1px solid #12151d;
-  border-radius: 40px;
-  background: #12151d;
-  color: #fff;
-  box-shadow: 0 7px 16px #4373be1a;
-  font-size: 16px;
+  gap: 9px;
+  min-height: 40px;
+  padding: 8px 15px;
+  border: 1px solid #bcc8db;
+  border-radius: 24px;
+  background: #fff;
+  color: #38537f;
+  box-shadow: none;
+  font-size: 14px;
   line-height: 1.5;
   margin-top: 20px;
   text-decoration: none;
   transition: background .2s, border-color .2s, transform .2s;
 }
 
-.resume-page .resume-download span { font-size: 17px; }
-.resume-page .resume-download:hover { color: #fff; background: #073cff; border-color: #073cff; transform: translateY(-2px); }
+.resume-page .resume-download span { font-size: 15px; }
+.resume-page .resume-download:hover { color: #073cff; background: #f2f6ff; border-color: #87a2ef; transform: translateY(-1px); }
 
 .resume-page .resume-stats {
   display: grid;
@@ -167,8 +167,9 @@ body.resume-page {
 }
 
 .resume-page .resume-strength {
+  --resume-strength-marker-center: 15.75px;
   position: relative;
-  border-left: 1px solid var(--resume-rule);
+  border-left: 0;
   padding: 0 0 0 24px;
 }
 
@@ -179,8 +180,19 @@ body.resume-page {
   height: 5px;
   border-radius: 50%;
   background: var(--resume-blue);
-  top: 6px;
-  left: -3px;
+  top: calc(var(--resume-strength-marker-center) - 2.5px);
+  left: -2px;
+  z-index: 1;
+}
+
+.resume-page .resume-strength::after {
+  content: "";
+  position: absolute;
+  top: var(--resume-strength-marker-center);
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: var(--resume-rule);
 }
 
 .resume-page .resume-strength h3 {
@@ -278,7 +290,7 @@ body.resume-page {
 .resume-page .resume-team { padding: 29px 0 0; }
 .resume-page .resume-team > h3 { font: 600 24px/1.5 var(--resume-serif); color: var(--resume-ink); margin: 0 0 10px; }
 .resume-page .resume-team > p { color: var(--resume-copy); line-height: 1.85; }
-.resume-page .resume-bottom-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 44px; margin-top: 62px; }
+.resume-page .resume-bottom-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 60px; margin-top: 62px; }
 .resume-page .resume-bottom-grid .resume-section-title { font-size: 26px; gap: 9px; margin-bottom: 26px; }
 .resume-page .resume-bottom-grid .resume-section-title small { font-size: 17px; }
 .resume-page .resume-history { list-style: none; margin: 0; padding: 0; }
@@ -292,8 +304,15 @@ body.resume-page {
 .resume-page .resume-history-description { color: var(--resume-copy); font-size: 16px; line-height: 1.85; margin-top: 12px; }
 .resume-page .resume-history-description p + p { margin-top: 8px; }
 .resume-page .resume-education article > h3 { font: 600 24px/1.5 var(--resume-serif); margin: 13px 0 9px; color: var(--resume-blue); }
-.resume-page .resume-education article > p { color: var(--resume-copy); font-size: 15px; line-height: 1.8; }
-.resume-page .resume-education article > p + p { margin-top: 6px; }
+.resume-page .resume-education-fields { display: grid; gap: 0; margin: 19px 0 22px; }
+.resume-page .resume-education-fields > div { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 10px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid #e2e8f6; }
+.resume-page .resume-education-fields dt { color: #7183a3; font-size: 12px; letter-spacing: .06em; }
+.resume-page .resume-education-fields dd { margin: 0; color: var(--resume-copy); font-size: 15px; line-height: 1.7; }
+.resume-page .resume-coursework > h4 { margin: 0 0 8px; color: #536c9c; font-size: 13px; line-height: 1.7; }
+.resume-page .resume-coursework-intro { margin: 0 0 11px; color: var(--resume-copy); font-size: 12px; line-height: 1.7; }
+.resume-page .resume-coursework > ul { display: grid; gap: 7px; list-style: none; margin: 0; padding: 0; }
+.resume-page .resume-coursework > ul > li { display: flex; gap: 9px; align-items: baseline; color: var(--resume-copy); font-size: 13px; line-height: 1.7; }
+.resume-page .resume-coursework > ul > li::before { content: ""; flex: 0 0 5px; width: 5px; height: 5px; margin-top: .15em; border-radius: 50%; background: #2454ff; }
 .resume-page .resume-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid var(--resume-rule); margin-top: 32px; padding-top: 23px; }
 .resume-page .resume-footer .resume-download { margin-top: 0; }
 .resume-page .resume-footer > a:last-child { font-size: 13px; color: #536c9c; }
@@ -312,7 +331,7 @@ body.resume-page {
   .resume-page .resume-project { grid-template-columns: 60px 150px minmax(0, 1fr); column-gap: 15px; }
   .resume-page .resume-project-index { font-size: 52px; }
   .resume-page .resume-project-copy { padding-left: 18px; }
-  .resume-page .resume-bottom-grid { gap: 26px; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+  .resume-page .resume-bottom-grid { gap: 44px; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
   .resume-page .resume-history-item { grid-template-columns: 1fr; gap: 6px; }
 }
 
@@ -337,7 +356,7 @@ body.resume-page {
   .resume-page .resume-hero { grid-template-columns: 34% minmax(0, 1fr); column-gap: 30px; }
   .resume-page .resume-portrait { height: clamp(280px, 38vw, 330px); }
   .resume-page .resume-stat > div > span { font-size: 23px; }
-  .resume-page .resume-bottom-grid { gap: 28px; }
+  .resume-page .resume-bottom-grid { gap: 44px; }
   .resume-page .resume-history-item { grid-template-columns: 1fr; gap: 6px; }
 }
 
@@ -363,7 +382,7 @@ body.resume-page {
   .resume-page .resume-section-title small { font-size: 17px; }
   .resume-page .resume-section-title::after { margin-left: 0; min-width: 10px; }
   .resume-page .resume-strengths { grid-template-columns: 1fr; gap: 24px; }
-  .resume-page .resume-strength { padding-left: 20px; }
+  .resume-page .resume-strength { --resume-strength-marker-center: 14.25px; padding-left: 20px; }
   .resume-page .resume-strength h3 { font-size: 23px; margin-bottom: 7px; }
   .resume-page .resume-experience { margin-top: 43px; }
   .resume-page .resume-employer-heading { display: block; margin-bottom: 18px; }

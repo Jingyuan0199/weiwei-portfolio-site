@@ -581,9 +581,14 @@ window.WEIWEI_CONCIERGE_DATA = {
       "answer": "Smart 是支持 Agent 配置、工作流编排、测试与发布的平台，起步时参考了 Coze 的工作流模式。微微从设计系统侧指导主题定制，与项目设计师共建业务组件并参与专业评审；产品一线需求和页面设计由负责同事推进。\n\n她的工作围绕节点、资源与配置，区分对象类型、运行状态和可用操作。项目后来没有继续推进，她在文章中回看当时工程拆步的背景，并讨论模型能力变化后，哪些工作仍值得投入。",
       "sources": [
         {
-          "title": "Smart · 业务对象与组件",
+          "title": "Smart · AI 应用构建与编排平台",
+          "href": "projects/smart.html#product",
+          "description": "从完整页面了解 Single Agent、Multi-Agent 与 Workflow"
+        },
+        {
+          "title": "Smart · 挂载资源与可用状态",
           "href": "projects/smart.html#assets",
-          "description": "区分节点、资源、类型与状态"
+          "description": "说明资源已挂载后仍不可用的原因与可执行操作"
         },
         {
           "title": "Smart · 主题与共用基础",
@@ -805,7 +810,7 @@ window.WEIWEI_CONCIERGE_DATA = {
       "description": "Infra Design System 是面向企业级产品的设计系统，连接组件、业务模式、页面模板与使用指南。通过体系化的 Design Tokens 支持跨产品复用和多业务主题，让设计、产品与前端能够在共同基础上持续工作。"
     },
     {
-      "title": "让 Agent 构建中的对象与状态，在组件里表达清楚。",
+      "title": "为 AI 应用构建平台，共建可复用的业务组件。",
       "href": "projects/smart.html",
       "keywords": [
         "Smart",
@@ -816,7 +821,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "主题指导",
         "业务组件"
       ],
-      "description": "Smart 起步时参考 Coze 的工作流模式。微微从设计系统侧指导主题定制、共建业务组件并参与评审，记录节点、资源与配置中的具体判断。"
+      "description": "Smart 将模型、知识与工具组合成可配置、调试和发布的 AI 应用，支持 Single Agent、Multi-Agent 与 Workflow。微微从设计系统侧指导主题定制、共建业务组件并参与评审。"
     },
     {
       "title": "在成熟数据平台上，建立专业设计支持。",

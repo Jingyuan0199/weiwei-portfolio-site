@@ -28,6 +28,7 @@
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&popover&&!popover.hidden){setContact(false);trigger.focus();}});
   document.addEventListener('click',event=>{if(!contact?.contains(event.target))setContact(false);});
   const copyTimers=new WeakMap();
+  const copyLabels={电话:'电话号码',邮箱:'邮箱地址',微信号:'微信号'};
   contact?.addEventListener('click',async event=>{
     const button=event.target.closest('[data-copy-text]');
     if(!button)return;
@@ -54,7 +55,7 @@
     copyTimers.set(button,setTimeout(()=>{
       button.textContent='复制';
       delete button.dataset.copyState;
-      button.setAttribute('aria-label','复制'+(button.dataset.copyKind==='电话'?'电话号码':'邮箱地址'));
+      button.setAttribute('aria-label','复制'+(copyLabels[button.dataset.copyKind]||button.dataset.copyKind||'内容'));
     },1500));
   });
   document.addEventListener('click',event=>{
