@@ -827,3 +827,7 @@ body:has(.creative-dialog[open]){overflow:hidden}
 
 /* Keep embedded Smart product screens from growing too wide on large displays. */
 .editorial-project[data-project="smart"] .project-reading-layout figure.project-evidence{width:100%;max-width:1000px;margin-inline:auto}
+
+/* Show original design images without an additional white card. */
+.editorial-project .project-evidence .project-evidence__preview{background:transparent;border:0;border-radius:0;box-shadow:none}
+.editorial-project .project-evidence .project-evidence__preview img{background:transparent;border:0;border-radius:0;box-shadow:none}

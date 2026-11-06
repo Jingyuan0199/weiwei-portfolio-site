@@ -792,7 +792,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "资源",
         "监控"
       ],
-      "description": "Space 是 Shopee Engineering Infrastructure 建设的工程基础设施平台，覆盖 100+ 子产品。我承担早期产品设计与设计基础建设，从分散的业务和技术信息中梳理产品关系，帮助团队形成可持续的设计支持。"
+      "description": "Space 是 Shopee Engineering Infrastructure 建设的工程基础设施平台，覆盖 100+ 子产品，连接服务归属、资源管理、工程交付、运行观测与治理等能力，为工程团队提供跨产品协作的工作环境。"
     },
     {
       "title": "让不同产品，共用一套可持续演进的设计基础。",
@@ -838,7 +838,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "数据治理",
         "数据开发"
       ],
-      "description": "DataSuite 是数据开发、分析与治理平台，由 Shopee Data Infrastructure 建设。我接手设计支持时，平台已有完整的产品体系和界面；工作重点是在既有产品与工程约束下改善复杂任务及跨产品体验。"
+      "description": "DataSuite 是 Shopee Data Infrastructure 建设的数据开发、分析与治理平台，包含 20+ 产品与平台模块，连接数据接入、加工、运行保障、资产发现与消费等工作，为数据工程师、分析人员和业务团队提供协作环境。"
     },
     {
       "title": "把好奇，做成可以体验的作品。",
