@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="公共组件应该承接多少差异？从 InfraD 与 DataSuite 的实践，讨论共用、迁移和持续维护。">
+  <meta name="description" content="一个新的需求，是放进公共组件，还是留在业务里？我每次都要先回答同一件事：什么该共用，什么各留各的。统一不是合并，是先把边界画清楚。">
   <meta name="color-scheme" content="light">
-  <title>结构与复用 — Design System 与 Infrastructure，都在为上层工作建立基础。 — 段微微</title>
+  <title>结构与复用 — 统一之前，先把边界画清楚 — 段微微</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/styles.css?v=740b930967">
   <link rel="stylesheet" href="../assets/site-chrome.css?v=7970a9ec63">
@@ -13,15 +13,15 @@
   <link rel="stylesheet" href="../assets/portfolio-v2.css?v=b08bdada2c">
   <link rel="stylesheet" href="../assets/editorial-refresh.css?v=324c366d32">
 <link rel="stylesheet" href="../assets/concierge.css?v=bfc2201f78">
-<link rel="stylesheet" href="../assets/typography.css?v=69970a27d3"><link rel="canonical" href="https://weiweiduan.cn/projects/systems-and-infrastructure.html"><meta property="og:url" content="https://weiweiduan.cn/projects/systems-and-infrastructure.html"><meta property="og:type" content="website"><meta property="og:title" content="结构与复用 — Design System 与 Infrastructure，都在为上层工作建立基础。 — 段微微"><meta property="og:description" content="公共组件应该承接多少差异？从 InfraD 与 DataSuite 的实践，讨论共用、迁移和持续维护。"></head>
-<body class="editorial-project editorial-essay" data-project="systems-and-infrastructure">
+<link rel="stylesheet" href="../assets/typography.css?v=69970a27d3"><link rel="stylesheet" href="../assets/story-terms.css?v=7903b8e633"><link rel="canonical" href="https://weiweiduan.cn/projects/systems-and-infrastructure.html"><meta property="og:url" content="https://weiweiduan.cn/projects/systems-and-infrastructure.html"><meta property="og:type" content="website"><meta property="og:title" content="结构与复用 — 统一之前，先把边界画清楚 — 段微微"><meta property="og:description" content="一个新的需求，是放进公共组件，还是留在业务里？我每次都要先回答同一件事：什么该共用，什么各留各的。统一不是合并，是先把边界画清楚。"></head>
+<body class="editorial-project editorial-essay revamp" data-project="systems-and-infrastructure">
   <a class="project-skip" href="#main">跳到正文</a>
-  <header class="portfolio-header"><div class="portfolio-header__inner"><button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">浏览</button><nav class="portfolio-nav" id="primary-navigation" aria-label="主要导航"><a href="../index.html"><span>首页</span></a><a href="../projects.html"><span>项目</span></a><a href="../insights.html" aria-current="page"><span>思考</span></a><a href="../career.html"><span>简历</span></a></nav><div class="header-actions"><div class="contact-menu" id="contact"><button type="button" class="contact-trigger" aria-expanded="false" aria-controls="contact-popover">联系 <span aria-hidden="true">↗</span></button><div id="contact-popover" class="contact-popover" aria-label="联系方式" hidden>
+  <header class="portfolio-header"><div class="portfolio-header__inner"><button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">浏览</button><nav class="portfolio-nav" id="primary-navigation" aria-label="主要导航"><a href="../index.html"><span>首页</span></a><a href="../projects.html"><span>项目</span></a><a href="../insights.html"><span>思考</span></a><a href="../career.html"><span>简历</span></a></nav><div class="header-actions"><div class="contact-menu" id="contact"><button type="button" class="contact-trigger" aria-expanded="false" aria-controls="contact-popover">联系 <span aria-hidden="true">↗</span></button><div id="contact-popover" class="contact-popover" aria-label="联系方式" hidden>
     <div class="contact-options">
       <div class="contact-method" aria-label="电话：13266821218"><small>电话</small><div class="contact-method__line"><strong>13266821218</strong><button class="contact-copy" type="button" data-copy-text="13266821218" data-copy-kind="电话" aria-label="复制电话号码">复制</button></div></div>
       <div class="contact-method" aria-label="邮箱：978278902@qq.com"><small>邮箱</small><div class="contact-method__line"><strong>978278902@qq.com</strong><button class="contact-copy" type="button" data-copy-text="978278902@qq.com" data-copy-kind="邮箱" aria-label="复制邮箱地址">复制</button></div></div>
       <div class="contact-method contact-wechat" aria-label="微信号：jingyuan0199"><small>微信</small><div class="contact-method__line"><strong>jingyuan0199</strong><button class="contact-copy" type="button" data-copy-text="jingyuan0199" data-copy-kind="微信号" aria-label="复制微信号">复制</button></div><div class="contact-qr-image"><img src="../assets/contact-wechat.jpg" width="888" height="1131" alt="微信二维码，扫码添加好友"></div></div>
-    </div></div></div><button type="button" class="concierge-trigger" aria-haspopup="dialog" aria-expanded="false" aria-label="问问微微，AI 导览助手" data-concierge-root="../"><span class="concierge-avatar"><img src="../assets/characters/weiwei-pearl-blue-v1.png" alt="" width="40" height="40"></span><span class="concierge-trigger__label">问问微微</span><span class="concierge-ai">AI</span></button></div></div></header><aside class="site-sidebar"><details class="site-directory" open><summary>思考菜单</summary><nav class="nav-children" aria-label="思考内的页面"><a href="../insights.html"><span>思考概览</span></a><section class="menu-group"><h2>AI 与时代</h2><ul><li><a href="../projects/when-models-plan.html"><span>模型变化与个人选择</span></a></li><li><a href="../projects/ai-design-infrastructure.html"><span>AI 设计探索与设计债</span></a></li></ul></section><section class="menu-group"><h2>产品与判断</h2><ul><li><a href="../projects/complex-product-decisions.html"><span>复杂度与判断</span></a></li><li><a href="../projects/systems-and-infrastructure.html" aria-current="page"><span>结构与复用</span></a></li></ul></section><section class="menu-group"><h2>团队与方法</h2><ul><li><a href="../projects/team-operating-model.html"><span>随阶段调整协作</span></a></li><li><a href="../projects/hiring-designers.html"><span>招聘中的判断</span></a></li><li><a href="../projects/design-practice.html"><span>研究与设计方法</span></a></li></ul></section></nav></details></aside>
+    </div></div></div><button type="button" class="concierge-trigger" aria-haspopup="dialog" aria-expanded="false" aria-label="问问微微，AI 导览助手" data-concierge-root="../"><span class="concierge-avatar"><img src="../assets/characters/weiwei-pearl-blue-v1.png" alt="" width="40" height="40"></span><span class="concierge-trigger__label">问问微微</span><span class="concierge-ai">AI</span></button></div></div></header>
   <div class="gallery-daylight" aria-hidden="true"></div>
   <main id="main">
     <header class="project-shell project-intro" id="top">
@@ -29,51 +29,47 @@
         <div class="project-hero__copy">
           <div class="product-identity"><strong>结构与复用</strong><span class="product-tag">产品与判断</span></div>
 
-          <h1>Design System 与 Infrastructure，都在为上层工作建立基础。</h1>
-          <p class="project-deck">公共组件应该承接多少差异？从 InfraD 与 DataSuite 的实践，讨论共用、迁移和持续维护。</p>
-          <p class="project-hero__note">做 InfraD 时，经常需要决定：一个新的需求，应该进入公共组件，还是留在业务里？共用以后，其他产品有机会少做一遍；但多加一个参数、一种例外，也意味着使用和维护的人要多理解一层。</p><p class="project-hero__note">我主导设计侧建设，与前端共同维护设计系统，也在工程与数据平台上做产品设计。这些工作让我反复面对共享的边界。每一处统一都需要说明，它能替使用者解决什么，又会把哪些负担带进来。</p>
+
+          <h1>统一之前，先把边界画清楚</h1>
+          <p class="project-deck">一个新的需求，是放进公共组件，还是留在业务里？我每次都要先回答同一件事：什么该共用，什么各留各的。统一不是合并，是先把边界画清楚。</p>
+
 
         </div>
 
       </div>
 
 
-      <dl class="project-meta"><div><dt>主题</dt><dd>产品与判断</dd></div><div><dt>阅读</dt><dd>约 4 分钟</dd></div></dl>
+      <dl class="project-meta"><div><dt>更新日期</dt><dd>2026-11-07</dd></div><div><dt>阅读</dt><dd>约 3 分钟</dd></div><div><dt>相关项目</dt><dd><a class="term" tabindex="0" data-term="Infra Design System">Infra Design System<span class="term-tip" role="note">Infra Design System（基础设施设计系统），简称 InfraD。由设计与前端共同建设维护，连接组件、业务模式、页面模板、使用指南与 Design Tokens，支持多业务主题及持续演进。</span></a> · <a class="term" tabindex="0" data-term="Space">Space<span class="term-tip" role="note">Shopee Engineering Infrastructure 建设的平台：日志、监控、Service CMDB、Server CMDB 等子产品都内置于其中，按产品线组织。</span></a> · <a class="term" tabindex="0" data-term="DataSuite">DataSuite<span class="term-tip" role="note">Shopee Data Infrastructure（数据基础设施）建设的平台，覆盖数据接入、开发、调度、分析与治理。</span></a></dd></div></dl>
 
     </header>
     <div class="project-shell project-reading-layout">
       <aside class="project-rail" aria-label="本页章节">
         <nav class="project-toc" aria-label="本文脉络">
           <p class="project-toc__title">本文脉络</p>
-          <ol><li><a data-section-link href="#contract" aria-current="location"><span class="toc-number">01</span><span>共用的边界</span></a></li><li><a data-section-link href="#cost"><span class="toc-number">02</span><span>迁移的代价</span></a></li><li><a data-section-link href="#ai"><span class="toc-number">03</span><span>下一位使用者</span></a></li></ol>
-          <a class="project-toc__top" href="#top">回到开头</a>
+          <ol><li><a data-section-link href="#contract" aria-current="location"><span class="toc-number">01</span><span>统一到哪里</span></a></li><li><a data-section-link href="#cost"><span class="toc-number">02</span><span>全局与局部</span></a></li><li><a data-section-link href="#ai"><span class="toc-number">03</span><span>把边界画给别人看</span></a></li></ol>
         </nav>
       </aside>
       <article class="project-article" aria-label="结构与复用 · 思考文章">
-        <section class="project-section" id="contract" aria-labelledby="heading-contract"><span class="project-section-alias" id="layers" aria-hidden="true"></span><span class="project-section-alias" id="heading-layers" aria-hidden="true"></span><p class="project-eyebrow">01 / 产品与判断</p><h2 id="heading-contract">长得像的页面未必应该共用</h2><p>同样叫表格，有的帮助用户定位资源，有的用于比较安全策略，还有的用来核查执行结果。外观接近，只能成为进一步分析的起点。</p>
-<p>如果对象、行为和状态足够接近，可以考虑共用组件；如果相近的是组织任务的方式，可以先提炼场景模式；业务差异较大时，也许只适合共享颜色、字号、间距等基础语义。合并得太早，差异会变成一串参数和例外，最后使用者仍然要重新理解整套东西。</p>
-<p>InfraD 的 Tokens 与 Figma Variables 提供了另一种处理变化的方式。组件引用共同的语义变量，Default、Smart、Ask、AiOps 等模式保留不同取值，整体圆角和 Tag 的局部圆角也可以分别配置。产品能沿用共同基础，同时拥有自己的主题。</p>
-<p>这类配置解决的是视觉表达。权限、状态和业务流程仍要结合产品设计。把变化留在适合的层级，共用基础才不至于强迫所有产品采用同一种工作方式。</p>
+        <section class="project-section" id="contract" aria-labelledby="heading-contract"><span class="project-section-alias" id="layers" aria-hidden="true"></span><span class="project-section-alias" id="heading-layers" aria-hidden="true"></span><p class="project-eyebrow">01 / 统一不是合并</p><h2 id="heading-contract">统一之前，先决定边界</h2><p>做 <a class="term" tabindex="0" data-term="Infra Design System">Infra Design System<span class="term-tip" role="note">Infra Design System（基础设施设计系统），简称 InfraD。由设计与前端共同建设维护，连接组件、业务模式、页面模板、使用指南与 Design Tokens，支持多业务主题及持续演进。</span></a> 时，最常面对的问题不是「要不要统一」，而是「统一到哪里」：同样叫表格，有的帮人定位资源，有的用来比较安全策略，有的核查执行结果。外观接近，只是进一步分析的起点。</p>
+<p>2021 年那会儿，深圳的 SC Guideline、新加坡基于 <a class="term" tabindex="0" data-term="Ant Design">Ant Design<span class="term-tip" role="note">广泛使用的 React 组件体系；InfraD 的基础组件基于它统一，保留交互、调整颜色与圆角。</span></a> 的规范、STC 的另一套资产同时在用。同年 10 月，我们定下方向：统一基于 Ant Design 原生基础组件，维护同一份文件，保留它的交互，调整颜色与圆角，按需扩展业务组件。统一不是把三套拼成一套，而是先决定哪些是公共的、哪些留给业务。</p></section>
+<section class="project-section" id="cost" aria-labelledby="heading-cost"><span class="project-section-alias" id="migration" aria-hidden="true"></span><span class="project-section-alias" id="heading-migration" aria-hidden="true"></span><p class="project-eyebrow">02 / 全局语义与局部例外</p><h2 id="heading-cost">全局和局部，分开配置</h2><p>升级 Token 时，同样的问题又出现一次：全局的语义和组件的局部例外，必须分开配置，而不是全部塞进同一条链。</p>
+<dl class="project-roles"><div><dt>全局语义 · 通用圆角</dt><dd>Default · Space 2，Smart 8，Ask 8，AIOps 6</dd></div><div><dt>组件默认</dt><dd>组件引用语义变量，不写死数值</dd></div><div><dt>局部例外 · Tag 圆角</dt><dd>Smart 4，Ask 16，AIOps 4</dd></div></dl>
 <figure class="project-evidence">
           <p class="project-evidence__source">Infra Design System · Figma 组件变量实录局部</p>
-          <a class="project-evidence__preview" href="../assets/editorial/insight-system-modes-20261103.png" target="_blank" rel="noreferrer" data-evidence-open="evidence-insight-system-modes-20261103-81" aria-haspopup="dialog" aria-controls="evidence-insight-system-modes-20261103-81" aria-label="放大原始图：同一语义变量在 Default、Smart、Ask 与 AiOps 模式下的映射"><img src="../assets/editorial/insight-system-modes-20261103.png" alt="同一语义变量在 Default、Smart、Ask 与 AiOps 模式下的映射" width="3140" height="1765" loading="lazy" decoding="async"></a>
+          <a class="project-evidence__preview" href="../assets/editorial/insight-system-modes-20261103.png" target="_blank" rel="noreferrer" data-evidence-open="evidence-insight-system-modes-20261103-78" aria-haspopup="dialog" aria-controls="evidence-insight-system-modes-20261103-78" aria-label="放大原始图：同一语义变量在 Default、Smart、Ask 与 AiOps 模式下的映射"><img src="../assets/editorial/insight-system-modes-20261103.png" alt="同一语义变量在 Default、Smart、Ask 与 AiOps 模式下的映射" width="3140" height="1765" loading="lazy" decoding="async"></a>
           <figcaption>组件引用共同的语义变量，不同模式保留产品的配置空间；这是已有资产的实际组织方式。</figcaption>
-          <dialog class="project-lightbox" id="evidence-insight-system-modes-20261103-81" aria-labelledby="evidence-title-insight-system-modes-20261103-81">
-            <header><p id="evidence-title-insight-system-modes-20261103-81">Infra Design System · Figma 组件变量实录局部</p><button type="button" data-evidence-close>关闭</button></header>
+          <dialog class="project-lightbox" id="evidence-insight-system-modes-20261103-78" aria-labelledby="evidence-title-insight-system-modes-20261103-78">
+            <header><p id="evidence-title-insight-system-modes-20261103-78">Infra Design System · Figma 组件变量实录局部</p><button type="button" data-evidence-close>关闭</button></header>
             <p class="project-lightbox__hint">左右滑动查看完整图</p>
             <div class="project-lightbox__image" role="region" tabindex="0" aria-label="原图，窄屏下可横向浏览"><img src="../assets/editorial/insight-system-modes-20261103.png" alt="同一语义变量在 Default、Smart、Ask 与 AiOps 模式下的映射" width="3140" height="1765"></div>
             <footer><span>组件引用共同的语义变量，不同模式保留产品的配置空间；这是已有资产的实际组织方式。</span></footer>
           </dialog>
-        </figure></section>
-<section class="project-section" id="cost" aria-labelledby="heading-cost"><p class="project-eyebrow">02 / 产品与判断</p><h2 id="heading-cost">到了成熟平台要先算迁移的账</h2><p>在 Space 推进共用基础，需要和前端、产品一起处理已有资产。后来接手 DataSuite，起点又不一样：平台和界面已经成型，历史实现、工程投入和各产品的迭代节奏，都影响着能改到哪里。</p>
-<p>DataSuite 没有完成整体统一，也没有全量采用 InfraD。值得统一的目标，可以和当期能够完成的改动分开讨论。主题、规则或局部调整能先改善的问题，就在现有条件下推进；牵涉迁移的部分，需要把投入和收益一起摆出来。</p>
-<p>这也改变了我对“统一完成”的理解。拥有一套完整规范，并不等于存量产品已经有条件采用它。把系统带进真实工作，需要接住现有的实现和协作方式，也需要接受某些差异暂时存在。</p></section>
-<section class="project-section" id="ai" aria-labelledby="heading-ai"><p class="project-eyebrow">03 / 产品与判断</p><h2 id="heading-ai">把下一位使用者考虑进来</h2><p>组件发布以后，工作还没有结束。我持续维护 Design Guide，把选择依据、组合方式和场景说明放在查阅资产的入口。一个人找到组件之后，还要能判断适不适合当前任务，哪些行为可以依赖，遇到例外该从哪里继续。</p>
-<p>使用中的困难、业务定制需求和评审反馈，也会回到组件与规则的调整中。它们有时提示资产缺了一种状态，有时提示指南没说清楚，有时则说明这件事本来就不应该由公共组件承担。</p>
-<p>后来尝试让 AI 使用这些资产，我又需要重新整理版本、适用条件和引用关系。给人写的说明，哪些可以直接共用，哪些还需要补成更明确的执行要求，要放到实际任务里尝试。相关探索另有文章展开，它没有让维护这件事消失。</p>
-<p>共同基础能不能长期用下去，要看后面的人是否找得到、用得明白，遇到差异时能否继续扩展。工程基础设施如此，设计系统的日常工作也一样。</p>
-<div class="project-related"><a class="project-related-card" href="infrad.html"><span class="project-related-label">相关项目</span><span class="project-related-arrow" aria-hidden="true">↗</span><strong>Infra Design System</strong><p>查看共用基础、主题定制与使用支持。</p></a><a class="project-related-card" href="ai-design-infrastructure.html"><span class="project-related-label">继续阅读</span><span class="project-related-arrow" aria-hidden="true">↗</span><strong>我把设计规范交给 AI 之后</strong><p>从系统资产延伸到 AI 生成的几条尝试与局限。</p></a></div></section>
-
+        </figure>
+<p>这样产品能沿用共同基础、同时拥有自己的主题；把一切差异都塞进同一个参数，最后谁都用不明白。</p>
+<p>后来支持 <a class="term" tabindex="0" data-term="DataSuite">DataSuite<span class="term-tip" role="note">Shopee Data Infrastructure（数据基础设施）建设的平台，覆盖数据接入、开发、调度、分析与治理。</span></a>，起点又不一样：平台已经成型，不同产品混着不同版本的 Ant Design，老旧和定制实现并存。我们走的是渐进的路：有设计师支持的业务范围采用新的资产和方式，没有新设计需求的部分保持原状。主题适配能力、部分业务使用、全产品线迁移，是三件不同的事。</p></section>
+<section class="project-section" id="ai" aria-labelledby="heading-ai"><span class="project-section-alias" id="usage" aria-hidden="true"></span><span class="project-section-alias" id="heading-usage" aria-hidden="true"></span><p class="project-eyebrow">03 / 边界要让别人用得起</p><h2 id="heading-ai">把边界画给别人看</h2><p>组件发布以后，工作没有结束。我持续维护 Design Guide，把选择依据、组合方式和场景说明放在查阅资产的入口：一个人找到组件之后，还要能判断适不适合当前任务，遇到例外该从哪里继续。</p>
+<p>统一从来不是终点。边界画清楚了，剩下的东西才真正能被复用——后面的人找得到、用得明白，遇到差异时还能继续扩展。</p></section>
+        <p class="project-disclosure">相关文件涉及企业内部信息，可在面试交流中结合脱敏处理后的材料展开介绍。</p>
         <div class="project-article__end"><span>结构与复用 / END</span><a href="#top">回到开头</a></div>
       </article>
     </div>

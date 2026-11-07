@@ -1,0 +1,9 @@
+/* 思考文章 revamp 增量：术语卡。排版、字号、颜色与页头留白全部沿用站点原有模板（与项目详情页一致），不额外覆盖。 */
+.product-identity:empty{display:none}
+dl.project-meta:empty{display:none}
+.term{position:relative;cursor:help;border-bottom:1px dashed #8fa6c8;text-decoration:none;color:inherit}
+.term:hover,.term:focus{border-bottom-color:#365b9d;color:#365b9d;outline:none}
+.term .term-tip{position:absolute;left:0;bottom:calc(100% + 9px);width:max-content;max-width:min(270px,72vw);padding:.55rem .7rem;border-radius:8px;background:#1d2b3a;color:#eaf1fa;font-size:.8rem;line-height:1.55;opacity:0;visibility:hidden;transition:opacity .12s ease;z-index:40;box-shadow:0 8px 22px rgba(29,43,58,.25);pointer-events:none;text-decoration:none}
+.term:hover .term-tip,.term:focus .term-tip,.term:focus-visible .term-tip{opacity:1;visibility:visible}
+.term .term-tip::after{content:"";position:absolute;top:100%;left:18px;border:6px solid transparent;border-top-color:#1d2b3a}
+.inline-note{color:#8a93a5;font-size:.88em}
