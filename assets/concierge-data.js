@@ -101,9 +101,9 @@ window.WEIWEI_CONCIERGE_DATA = {
           "description": "专家怎样理解、授权、纠正和接管处理过程"
         },
         {
-          "title": "我把设计规范交给 AI 之后",
+          "title": "2025 年末，规则都在我脑子里",
           "href": "projects/ai-design-infrastructure.html#phase-one",
-          "description": "Figma MCP、Make、React 三条路径与实际限制"
+          "description": "Ask 的早实践、蒸馏失败与 CTO 约见"
         },
         {
           "title": "AI 创作与实验",
@@ -124,7 +124,7 @@ window.WEIWEI_CONCIERGE_DATA = {
     },
     {
       "id": "ai-design",
-      "title": "我把设计规范交给 AI 之后",
+      "title": "我试着把自己蒸馏给 AI，只成功了一部分。",
       "keywords": [
         "ai 设计探索",
         "ai设计探索",
@@ -140,12 +140,12 @@ window.WEIWEI_CONCIERGE_DATA = {
         "skill探索",
         "skill 探索"
       ],
-      "answer": "为了让 AI 使用 Infra Design System，微微尝试了三条路径：让 Codex 经 MCP 操作 Figma、用 Design MD 约束 Figma Make，以及让 Codex 在 React 工程中按既有组件生成界面。三条路有快有慢：经 MCP 操作画布等一份稿比手工还慢，Make 或直接生成很快，在已有 React 组件的工程里生成时间可以接受，但只擅长标准界面，需要创造性的需求完成得都不行。\n\n这轮探索发生在「设计」还被承认应该独立存在的时期。到 2026 年下半年，设计环节在很多流程里被跳过，她所在的设计团队也在这一轮被解散。她在文章中讨论留下的设计债：组件用对、页面能运行之后，任务范围、状态含义、异常恢复和方案取舍仍可能没有想清楚。她愿意继续把经验写进 Skill，同时用实际任务检验生成、纠正和维护的总成本。",
+      "answer": "2025 年末，微微用 Figma Make 做出了 Ask 的可运行高保真方案——那时大家还没开始用 AI 直接生成产品页面，完整的大型产品更没有先例。她算实践得比较早的一批：当时没有 Design MD 约束，所有规则都在她脑子里，哪些地方拆成 Biz Component 也是先在脑子里成了体系。之后团队 Design Manager 安排专人，把她上千轮对话交给 AI 总结，想复制这条路，没有成功；后来 CTO 专门约见她，问怎么用 AI 做设计；Figma 的产品负责人也来问她怎么用 Make 做大型产品，还邀请她分享案例——涉及内部信息，只能拒绝。\n\n她后来的一系列尝试，本质上是试图把一个专家设计师「蒸馏」成 AI 能理解的规范：Codex 经 MCP 操作 Figma、用 Design MD 约束 Figma Make、让 Codex 在 React 工程里按组件生成。三条路有快有慢，但只擅长标准界面。蒸馏到最后，能写出来的只有标准规范；最有价值的判断——为什么拆组件、哪种差异必须保留、什么风险不能放行——没法蒸馏。",
       "sources": [
         {
-          "title": "三条实现路径",
+          "title": "2025 年末，规则都在我脑子里",
           "href": "projects/ai-design-infrastructure.html#phase-one",
-          "description": "从 Figma 画布、Make 方案到 React 工程"
+          "description": "Ask 的早实践、蒸馏失败与 CTO 约见"
         },
         {
           "title": "被省下的工作去了哪里",
@@ -166,7 +166,7 @@ window.WEIWEI_CONCIERGE_DATA = {
     },
     {
       "id": "when-models-plan",
-      "title": "当模型自己会规划，哪些工作还值得我们设计？",
+      "title": "当模型自己会规划，哪些判断还值得人做？",
       "keywords": [
         "coze",
         "扣子",
@@ -181,17 +181,17 @@ window.WEIWEI_CONCIERGE_DATA = {
         "smart和coze",
         "smart 和 coze"
       ],
-      "answer": "微微读到扣子部分企业套餐调整的公告后，想起了曾参与的 Smart。她在文章中回看：Smart 起步时追赶 Coze 的工作流模式，借助工程拆步组织当时还不够稳定的模型能力；项目后来没有继续推进，也让她重新审视过去方案成立的前提。\n\n同一天读到的梁文锋交流报道，又让她思考长期目标与眼前机会怎样排序。文章由这些经历追问：自己做的事情在帮助谁，哪些方法需要随着模型变化调整，以及怎样把技术带来的可能落到具体的人和事上。",
+      "answer": "微微读到扣子企业套餐调整的公告，想起参与过的两个产品：Smart 的工作流模式与 Coze 类似——不是追赶谁，企业内部考虑信息安全一般选择自建；Ask 的可执行 SOP 也是同一种模式。两个产品做的时候都是公司级重点项目，现在都安静了下来。\n\n她的判断：给模型补短板的中间层，寿命等于短板的寿命。行业把 AGI 当作主线，梁文锋在 2026 年 5 月与投资人的闭门交流里说，C 端和 B 端都是做 AGI 路上的副产物、中间的产出——工作流、SOP 平台就是这类形态，让事情跑起来，也会在补上短板后退场；设计系统不在这个类别里，它沉淀判断，只是会换使用者。形态会退场，但留下了一条分界：被吸收的是执行，接不走的四件事是定义问题、承担后果、模糊取舍、说服与交接。Ask 的经历就是把这条分界产品化：让 AI 承接任务，人在关键节点授权、纠正、接管。",
       "sources": [
         {
-          "title": "当时为什么需要工作流",
+          "title": "两个风风火火的产品，安静下来之后",
           "href": "projects/when-models-plan.html#workflow-value",
-          "description": "Smart 的背景与模型能力变化带来的问题"
+          "description": "Coze 公告与 Smart、Ask 的兴衰"
         },
         {
-          "title": "比追上一个产品更难的选择",
+          "title": "被吸收的是执行，接不走的是判断",
           "href": "projects/when-models-plan.html#long-term-choices",
-          "description": "报道引出的个人思考与长期选择"
+          "description": "四件事与 Ask 的产品化"
         }
       ],
       "suggestions": [
@@ -224,16 +224,16 @@ window.WEIWEI_CONCIERGE_DATA = {
         "ask设计",
         "ask 设计"
       ],
-      "answer": "在 Ask 中，微微以主设计师身份协同 PM 梳理角色、任务与核心流程，开展专家访谈，并设计人的授权、纠正和接管方式。从 2025 年末开始，她使用 Figma Make 制作可运行、可交互的高保真方案，设计成熟度接近交付标准。\n\n生成实现不符合当时前端团队的生产环境要求，不能直接当作生产代码使用。后续把方案整理为设计文件、业务组件与主题，用于持续修改、组件复用和团队协作。",
+      "answer": "在 Ask 中，微微以主设计师身份，在接手时只剩三天的筹备期里协同多位 TPM 梳理角色、任务与核心流程，开展专家访谈，并设计人的授权、纠正和接管方式。从 2025 年末开始，她使用 Figma Make 制作可运行、可交互的高保真方案；三天内做出首版，与 Figma Make 的对话累计约一千轮——当时公司里还没有设计师用这种方式做出过可运行的大型产品方案。\n\nMake 生成的是 Figma 自己的前端实现，不符合公司生产环境要求，当时无法直接采用。基本定稿后，她把方案整理为设计文件、业务组件与主题，用于持续修改、组件复用和团队协作。",
       "sources": [
         {
-          "title": "Ask · 产品定义",
+          "title": "Ask · 接手与首版",
           "href": "projects/ask.html#definition",
-          "description": "拉齐用户、任务与模块间的关系"
+          "description": "三天拼出产品全貌，可运行方案通过评审"
         },
         {
-          "title": "Ask · 协作与交付",
-          "href": "projects/ask.html#delivery",
+          "title": "Ask · SOP 与交付",
+          "href": "projects/ask.html#assets",
           "description": "从可体验方案到可维护的设计资产"
         }
       ],
@@ -264,19 +264,21 @@ window.WEIWEI_CONCIERGE_DATA = {
         "log platform",
         "cmdb",
         "toc",
+        "service cmdb",
+        "server cmdb",
         "基础设施"
       ],
-      "answer": "Space 是工程基础设施平台，覆盖资源、服务、观测与治理等相互关联的领域。微微从具体工具进入业务，梳理对象、状态、角色和上下游，逐步建立产品全貌与团队设计基础；工作包括产品初建、改版、持续迭代和已有产品承接。\n\n可以先看服务如何关联资源的 Service CMDB，再看日志平台如何支持调查与配置。它们是代表案例，并不等于她全部工作的范围。",
+      "answer": "Space 是工程基础设施平台，覆盖资源、服务、观测与治理等相互关联的领域。微微从具体工具进入业务，梳理对象、状态、角色和上下游，逐步建立产品全貌与团队设计基础；工作包括产品初建、改版、持续迭代和已有产品承接。\n\n可以先看 Service CMDB 怎么理清多层结构，再看 Server CMDB 怎么支持专业查询。它们是代表案例，并不等于她全部工作的范围。",
       "sources": [
         {
-          "title": "Space · 从具体业务理解全局",
-          "href": "projects/space.html#understanding",
-          "description": "建立复杂领域的共同认知与设计基础"
+          "title": "Space · 先看整个工程世界",
+          "href": "projects/space.html#context",
+          "description": "平台范围、两种角色与九领域全景"
         },
         {
           "title": "Space · 日志平台",
           "href": "projects/space.html#log",
-          "description": "从日志调查到配置与持续质量把关"
+          "description": "搭建设计基础、指导后续设计与质量责任"
         }
       ],
       "suggestions": [
@@ -296,26 +298,28 @@ window.WEIWEI_CONCIERGE_DATA = {
       "keywords": [
         "datasuite",
         "data suite",
-        "data infra",
         "数据平台",
         "数据开发",
         "数据治理",
-        "数据分析",
         "datago",
-        "data go",
         "flink",
         "dashboard",
-        "data service"
+        "data service",
+        "api testing",
+        "取数",
+        "看板",
+        "接口测试",
+        "权限"
       ],
-      "answer": "DataSuite 面向数据开发、分析与治理。微微接手时，平台已经有成体系的产品与界面；她补充的是专业、系统的设计支持，梳理复杂任务、跨产品流程、权限边界与操作反馈。\n\nDataGo 展示不同角色怎样发现模型和查询数据，Flink 展示批量任务及依赖编排。优化在既有工程约束下推进，不能概括为从零创建平台，也没有完成全量统一或全面采用设计系统。",
+      "answer": "DataSuite 面向数据开发、分析与治理。微微接手时，平台已经有成体系的产品与界面；她补充的是专业、系统的设计支持，梳理复杂任务、跨产品流程、权限边界与操作反馈。\n\n按四个产品看她的工作：DataGo 讲一次查询怎样说清数据来源、取数与权限；Dashboard 讲编辑看板时配置与图表的对应关系；Flink 讲触发流水线后怎样追到具体失败步骤；Data Service 讲怎样读懂接口并发起调用。优化在既有工程约束下推进，不能概括为从零创建平台，也没有完成全量统一或全面采用设计系统。",
       "sources": [
         {
-          "title": "DataSuite · DataGo",
+          "title": "DataSuite · 一次查询的起点与权限边界",
           "href": "projects/data-suite.html#go",
-          "description": "区分数据使用者与模型维护者的任务"
+          "description": "模型发现、查询配置与权限变化"
         },
         {
-          "title": "DataSuite · 改造范围与取舍",
+          "title": "DataSuite · 存量条件与渐进支持",
           "href": "projects/data-suite.html#tradeoffs",
           "description": "在工程与组织条件下推进体验改进"
         }
@@ -348,22 +352,22 @@ window.WEIWEI_CONCIERGE_DATA = {
         "patterns",
         "templates"
       ],
-      "answer": "微微发起并主导 Infra Design System 的设计侧建设，与前端共同维护。2021 年的记录呈现了多套规范并存的起点，以及组件进度、业务需求池和实现校对的具体工作；这些是建设过程中的证据。\n\n系统后来扩展到业务组件、Patterns、页面模板与使用指南。2024 年，她主导设计侧 v4 → v5 与 Design Tokens 体系化升级，支持多业务主题。持续的资产维护、团队指导和使用反馈，又帮助组件、主题与规则继续改进。\n\n今年，她进一步尝试让 AI 使用这些积累，分别探索 Figma MCP、Make 与 React 的工作方式。这轮实验没有达到她期待的稳定程度；相关过程和对设计债的担忧，在《我把设计规范交给 AI 之后》中展开。",
+      "answer": "Infra Design System 由微微主导从 0 到 1 建设，并在之后持续升级迭代：设计侧建设、Design Tokens 体系化升级、UI Kit 维护与全组件指南。实现部分与前端共同维护。\n\n2024 年她推动 v4 → v5 设计侧升级，把 Token 机制转成设计资产；以新增文字颜色层级这类调整为例，连同设计与工程落地的完整改动，从 2–3 周缩短到最快半小时。2023 年她休产假期间，产品团队主导了 Space 的 UI/UX Standards，返岗后她接手把已落地资产整理到 Space Biz Component。团队使用上，部分常规需求由 TPM 基于模板搭建，设计师参与关键判断与质量检查。",
       "sources": [
         {
-          "title": "Infra Design System · 资产体系",
-          "href": "projects/infrad.html#foundation",
-          "description": "组件、模式、模板与指南如何相互配合"
+          "title": "InfraD · 从分散工具到共同基础",
+          "href": "projects/infrad.html#context",
+          "description": "0 到 1 的建设与 Space Standards 时间线"
         },
         {
-          "title": "Infra Design System · 进入日常工作",
+          "title": "InfraD · Space 升级后改变了什么",
+          "href": "projects/infrad.html#benefits",
+          "description": "取值依据与完整改动时间"
+        },
+        {
+          "title": "InfraD · 让资产进入团队日常工作",
           "href": "projects/infrad.html#adoption",
-          "description": "团队使用、指导与质量检查"
-        },
-        {
-          "title": "我把设计规范交给 AI 之后",
-          "href": "projects/ai-design-infrastructure.html#assets",
-          "description": "让规则被 AI 使用之后，仍需继续判断的问题"
+          "description": "指南、Patterns、TPM 与质量检查"
         }
       ],
       "suggestions": [
@@ -570,7 +574,7 @@ window.WEIWEI_CONCIERGE_DATA = {
     },
     {
       "id": "smart",
-      "title": "Smart 中的主题与组件支持",
+      "title": "Smart 与 Ask 的可执行 SOP",
       "keywords": [
         "smart",
         "agent平台",
@@ -579,40 +583,31 @@ window.WEIWEI_CONCIERGE_DATA = {
         "资源挂载",
         "业务组件",
         "主题指导",
-        "配置区",
-        "agent编排"
+        "工作流",
+        "workflow",
+        "中间态"
       ],
-      "answer": "Smart 是支持 Agent 配置、工作流编排、测试与发布的平台，起步时参考了 Coze 的工作流模式。微微从设计系统侧指导主题定制，与项目设计师共建业务组件并参与专业评审；产品一线需求和页面设计由负责同事推进。\n\n她的工作围绕节点、资源与配置，区分对象类型、运行状态和可用操作。项目后来没有继续推进，她在文章中回看当时工程拆步的背景，并讨论模型能力变化后，哪些工作仍值得投入。",
+      "answer": "Smart 是支持 Agent 配置、工作流编排、测试与发布的平台。Ask 的可执行 SOP 就是用它的工作流模式搭出来的——把处理步骤编排成节点流程，配上参数与人工确认，再由 Ask 调用。微微从设计系统侧指导主题定制，与项目设计师共建业务组件并参与专业评审；产品一线需求和页面设计由负责同事推进。她在 Ask 篇中回看：Ask 与 Smart 都是模型还不够强时的中间形态，等模型自己会规划，这一层会被吸收或重组。",
       "sources": [
         {
-          "title": "Smart · AI 应用构建与编排平台",
-          "href": "projects/smart.html#product",
-          "description": "从完整页面了解 Single Agent、Multi-Agent 与 Workflow"
+          "title": "Ask · 可执行 SOP 背后的工作流平台",
+          "href": "projects/ask.html#smart",
+          "description": "Smart 的编排、参数与主题，以及中间态判断"
         },
         {
-          "title": "Smart · 挂载资源与可用状态",
-          "href": "projects/smart.html#assets",
-          "description": "说明资源已挂载后仍不可用的原因与可执行操作"
-        },
-        {
-          "title": "Smart · 主题与共用基础",
-          "href": "projects/smart.html#theme",
-          "description": "在共同语义上保留业务差异"
-        },
-        {
-          "title": "当模型自己会规划，哪些工作还值得我们设计？",
-          "href": "projects/when-models-plan.html#workflow-value",
-          "description": "从参与 Smart 的经历重新审视工作流与长期选择"
+          "title": "Ask · 处理经验要能调用，也要能维护",
+          "href": "projects/ask.html#assets",
+          "description": "可执行 SOP 与人工文档两条路径"
         }
       ],
       "suggestions": [
         {
-          "label": "看看 Ask 的主设计职责",
-          "query": "Ask 中微微具体负责什么，如何交付"
+          "label": "Ask 的 SOP 怎么执行",
+          "query": "Ask 如何设计人机协作"
         },
         {
-          "label": "读读工作流的反思",
-          "query": "她怎么看 Smart 和 Coze 的变化"
+          "label": "什么是中间态",
+          "query": "当模型自己会规划，哪些工作还值得我们设计"
         }
       ]
     },
@@ -728,7 +723,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "产品与判断",
         "团队与方法"
       ],
-      "description": "把经历里的取舍，沉淀成判断：从复杂产品的判断，到带团队、选对人的方法，再到 AI 时代的选择。"
+      "description": "六篇思考，依次围绕 AI 与时代、产品与判断、团队与方法：每一篇回答一个复杂系统里的判断问题，并给出成立的条件。"
     },
     {
       "title": "简历与专业能力",
@@ -811,21 +806,7 @@ window.WEIWEI_CONCIERGE_DATA = {
         "Patterns",
         "Templates"
       ],
-      "description": "Infra Design System 是面向企业级产品的设计系统，连接组件、业务模式、页面模板与使用指南。通过体系化的 Design Tokens 支持跨产品复用和多业务主题，让设计、产品与前端能够在共同基础上持续工作。"
-    },
-    {
-      "title": "为 AI 应用构建平台，共建可复用的业务组件。",
-      "href": "projects/smart.html",
-      "keywords": [
-        "Smart",
-        "Agent",
-        "编排",
-        "节点",
-        "资源",
-        "主题指导",
-        "业务组件"
-      ],
-      "description": "Smart 将模型、知识与工具组合成可配置、调试和发布的 AI 应用，支持 Single Agent、Multi-Agent 与 Workflow。微微从设计系统侧指导主题定制、共建业务组件并参与评审。"
+      "description": "Infra Design System 是面向企业级产品的设计系统，连接组件、业务模式、页面模板与使用指南。通过体系化的 Design Tokens 和业务主题，让不同产品可以共用基础，也能保留各自需要的表达。"
     },
     {
       "title": "在成熟数据平台上，建立专业设计支持。",
@@ -930,23 +911,6 @@ window.WEIWEI_CONCIERGE_DATA = {
         "产品与判断"
       ],
       "description": "工程基础设施这类产品的复杂度有两个来源：页面背后的技术体系，和使用它工作的人。设计不能消灭复杂度，只能把它组织成页面上的秩序。"
-    },
-    {
-      "title": "统一之前，先把边界画清楚",
-      "href": "projects/systems-and-infrastructure.html",
-      "keywords": [
-        "结构",
-        "复用",
-        "系统",
-        "分层",
-        "基础",
-        "Infrastructure",
-        "Design System",
-        "抽象",
-        "治理",
-        "产品与判断"
-      ],
-      "description": "一个新的需求，是放进公共组件，还是留在业务里？统一不是合并，是先把边界画清楚。"
     },
     {
       "title": "带团队，就是让工作有人接得住",

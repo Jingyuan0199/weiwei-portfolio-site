@@ -7,3 +7,12 @@ dl.project-meta:empty{display:none}
 .term:hover .term-tip,.term:focus .term-tip,.term:focus-visible .term-tip{opacity:1;visibility:visible}
 .term .term-tip::after{content:"";position:absolute;top:100%;left:18px;border:6px solid transparent;border-top-color:#1d2b3a}
 .inline-note{color:#8a93a5;font-size:.88em}
+
+.story-ref{color:#365b9d;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#9db2cf}
+.story-ref:hover{color:#244d8a}
+
+.image-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:44px 0 28px}
+.image-row__cell .project-evidence{margin:0}
+.image-row__cell .project-evidence__preview{border-radius:8px}
+.image-row__cell img{width:100%;height:auto}
+.image-row__cell figcaption{font-size:12.5px;line-height:1.6;margin-top:8px}

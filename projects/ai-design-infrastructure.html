@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="把规范写得再全，还是有些判断我没能交给 AI。三条路径有快有慢，我担心的不是 AI 的速度，而是被省掉的思考会变成设计债——尤其是设计环节本身被跳过之后。">
+  <meta name="description" content="2025 年末，我用 Figma Make 做出了 Ask 的可运行方案——那时大家还没开始用 AI 直接生成产品页面，完整的大型产品更没有先例。那次真正在起作用的，不是工具，是我脑子里没有写出来的判断。之后的一系列尝试，都是在把这些判断「蒸馏」给 AI：能写出来的只有标准规范，最有价值的部分，蒸馏不出来。">
   <meta name="color-scheme" content="light">
-  <title>AI 设计探索 — 我把设计规范交给 AI 之后 — 段微微</title>
+  <title>把经验蒸馏给 AI — 我试着把自己蒸馏给 AI，只成功了一部分。 — 段微微</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/styles.css?v=740b930967">
+  <link rel="stylesheet" href="../assets/styles.css?v=ca4cec2095">
   <link rel="stylesheet" href="../assets/site-chrome.css?v=7970a9ec63">
-  <link rel="stylesheet" href="../assets/gallery.css?v=b337248e62">
-  <link rel="stylesheet" href="../assets/portfolio-v2.css?v=b08bdada2c">
-  <link rel="stylesheet" href="../assets/editorial-refresh.css?v=324c366d32">
+  <link rel="stylesheet" href="../assets/gallery.css?v=22d2d63ef5">
+  <link rel="stylesheet" href="../assets/portfolio-v2.css?v=1483e4ee68">
+  <link rel="stylesheet" href="../assets/editorial-refresh.css?v=9e4d707c40">
 <link rel="stylesheet" href="../assets/concierge.css?v=bfc2201f78">
-<link rel="stylesheet" href="../assets/typography.css?v=69970a27d3"><link rel="stylesheet" href="../assets/story-terms.css?v=7903b8e633"><link rel="canonical" href="https://weiweiduan.cn/projects/ai-design-infrastructure.html"><meta property="og:url" content="https://weiweiduan.cn/projects/ai-design-infrastructure.html"><meta property="og:type" content="website"><meta property="og:title" content="AI 设计探索 — 我把设计规范交给 AI 之后 — 段微微"><meta property="og:description" content="把规范写得再全，还是有些判断我没能交给 AI。三条路径有快有慢，我担心的不是 AI 的速度，而是被省掉的思考会变成设计债——尤其是设计环节本身被跳过之后。"></head>
+<link rel="stylesheet" href="../assets/typography.css?v=69970a27d3"><link rel="stylesheet" href="../assets/story-terms.css?v=7a8ed6d3d2"><link rel="canonical" href="https://weiweiduan.cn/projects/ai-design-infrastructure.html"><meta property="og:url" content="https://weiweiduan.cn/projects/ai-design-infrastructure.html"><meta property="og:type" content="website"><meta property="og:title" content="把经验蒸馏给 AI — 我试着把自己蒸馏给 AI，只成功了一部分。 — 段微微"><meta property="og:description" content="2025 年末，我用 Figma Make 做出了 Ask 的可运行方案——那时大家还没开始用 AI 直接生成产品页面，完整的大型产品更没有先例。那次真正在起作用的，不是工具，是我脑子里没有写出来的判断。之后的一系列尝试，都是在把这些判断「蒸馏」给 AI：能写出来的只有标准规范，最有价值的部分，蒸馏不出来。"></head>
 <body class="editorial-project editorial-essay revamp" data-project="ai-design-infrastructure">
   <a class="project-skip" href="#main">跳到正文</a>
   <header class="portfolio-header"><div class="portfolio-header__inner"><button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">浏览</button><nav class="portfolio-nav" id="primary-navigation" aria-label="主要导航"><a href="../index.html"><span>首页</span></a><a href="../projects.html"><span>项目</span></a><a href="../insights.html" aria-current="page"><span>思考</span></a><a href="../career.html"><span>简历</span></a></nav><div class="header-actions"><div class="contact-menu" id="contact"><button type="button" class="contact-trigger" aria-expanded="false" aria-controls="contact-popover">联系 <span aria-hidden="true">↗</span></button><div id="contact-popover" class="contact-popover" aria-label="联系方式" hidden>
@@ -21,17 +21,17 @@
       <div class="contact-method" aria-label="电话：13266821218"><small>电话</small><div class="contact-method__line"><strong>13266821218</strong><button class="contact-copy" type="button" data-copy-text="13266821218" data-copy-kind="电话" aria-label="复制电话号码">复制</button></div></div>
       <div class="contact-method" aria-label="邮箱：978278902@qq.com"><small>邮箱</small><div class="contact-method__line"><strong>978278902@qq.com</strong><button class="contact-copy" type="button" data-copy-text="978278902@qq.com" data-copy-kind="邮箱" aria-label="复制邮箱地址">复制</button></div></div>
       <div class="contact-method contact-wechat" aria-label="微信号：jingyuan0199"><small>微信</small><div class="contact-method__line"><strong>jingyuan0199</strong><button class="contact-copy" type="button" data-copy-text="jingyuan0199" data-copy-kind="微信号" aria-label="复制微信号">复制</button></div><div class="contact-qr-image"><img src="../assets/contact-wechat.jpg" width="888" height="1131" alt="微信二维码，扫码添加好友"></div></div>
-    </div></div></div><button type="button" class="concierge-trigger" aria-haspopup="dialog" aria-expanded="false" aria-label="问问微微，AI 导览助手" data-concierge-root="../"><span class="concierge-avatar"><img src="../assets/characters/weiwei-pearl-blue-v1.png" alt="" width="40" height="40"></span><span class="concierge-trigger__label">问问微微</span><span class="concierge-ai">AI</span></button></div></div></header><aside class="site-sidebar"><details class="site-directory" open><summary>思考菜单</summary><nav class="nav-children" aria-label="思考内的页面"><a href="../insights.html"><span>思考概览</span></a><section class="menu-group"><h2>产品与判断</h2><ul><li><a href="../projects/complex-product-decisions.html"><span>复杂度与判断</span></a></li></ul></section><section class="menu-group"><h2>团队与方法</h2><ul><li><a href="../projects/team-operating-model.html"><span>随阶段调整协作</span></a></li><li><a href="../projects/hiring-designers.html"><span>招聘中的判断</span></a></li><li><a href="../projects/design-practice.html"><span>研究与设计方法</span></a></li></ul></section><section class="menu-group"><h2>AI 与时代</h2><ul><li><a href="../projects/ai-design-infrastructure.html" aria-current="page"><span>AI 设计探索与设计债</span></a></li><li><a href="../projects/when-models-plan.html"><span>模型变化与个人选择</span></a></li></ul></section></nav></details></aside>
+    </div></div></div><button type="button" class="concierge-trigger" aria-haspopup="dialog" aria-expanded="false" aria-label="问问微微，AI 导览助手" data-concierge-root="../"><span class="concierge-avatar"><img src="../assets/characters/weiwei-pearl-blue-v1.png" alt="" width="40" height="40"></span><span class="concierge-trigger__label">问问微微</span><span class="concierge-ai">AI</span></button></div></div></header><aside class="site-sidebar"><details class="site-directory" open><summary>思考菜单</summary><nav class="nav-children" aria-label="思考内的页面"><a href="../insights.html"><span>思考概览</span></a><section class="menu-group"><h2>AI 与时代</h2><ul><li><a href="../projects/ai-design-infrastructure.html" aria-current="page"><span>把经验蒸馏给 AI</span></a></li><li><a href="../projects/when-models-plan.html"><span>模型规划之后</span></a></li></ul></section><section class="menu-group"><h2>产品与判断</h2><ul><li><a href="../projects/complex-product-decisions.html"><span>页面上的秩序</span></a></li></ul></section><section class="menu-group"><h2>团队与方法</h2><ul><li><a href="../projects/team-operating-model.html"><span>随阶段调整协作</span></a></li><li><a href="../projects/hiring-designers.html"><span>招聘中的判断</span></a></li><li><a href="../projects/design-practice.html"><span>研究与设计方法</span></a></li></ul></section></nav></details></aside>
   <div class="gallery-daylight" aria-hidden="true"></div>
   <main id="main">
     <header class="project-shell project-intro" id="top">
       <div class="project-hero">
         <div class="project-hero__copy">
-          <div class="product-identity"><strong>AI 设计探索</strong><span class="product-tag">AI 与时代</span></div>
+          <div class="product-identity"><strong>把经验蒸馏给 AI</strong><span class="product-tag">AI 与时代</span></div>
 
 
-          <h1>我把设计规范交给 AI 之后</h1>
-          <p class="project-deck">把规范写得再全，还是有些判断我没能交给 AI。三条路径有快有慢，我担心的不是 AI 的速度，而是被省掉的思考会变成<a class="term" tabindex="0" data-term="设计债">设计债<span class="term-tip" role="note">被跳过、未验证的设计决策，在之后的使用与维护中逐渐积累的负担。</span></a>——尤其是设计环节本身被跳过之后。</p>
+          <h1>我试着把自己蒸馏给 AI，只成功了一部分。</h1>
+          <p class="project-deck">2025 年末，我用 Figma Make 做出了 Ask 的可运行方案——那时大家还没开始用 AI 直接生成产品页面，完整的大型产品更没有先例。那次真正在起作用的，不是工具，是我脑子里没有写出来的判断。之后的一系列尝试，都是在把这些判断「蒸馏」给 AI：能写出来的只有标准规范，最有价值的部分，蒸馏不出来。</p>
 
 
         </div>
@@ -39,39 +39,44 @@
       </div>
 
 
-      <dl class="project-meta"><div><dt>探索</dt><dd>Figma MCP · Make · React</dd></div><div><dt>更新日期</dt><dd>2026-11-07</dd></div><div><dt>阅读</dt><dd>约 3 分钟</dd></div></dl>
+      <dl class="project-meta"><div><dt>探索</dt><dd>Figma MCP · Make · React</dd></div><div><dt>更新日期</dt><dd>2026-11-08</dd></div><div><dt>阅读</dt><dd>约 3 分钟</dd></div></dl>
 
     </header>
     <div class="project-shell project-reading-layout">
       <aside class="project-rail" aria-label="本页章节">
         <nav class="project-toc" aria-label="本文脉络">
           <p class="project-toc__title">本文脉络</p>
-          <ol><li><a data-section-link href="#phase-one" aria-current="location"><span class="toc-number">01</span><span>三条路径</span></a></li><li><a data-section-link href="#assets"><span class="toc-number">02</span><span>能写进去多少</span></a></li><li><a data-section-link href="#phase-three"><span class="toc-number">03</span><span>被省下的工作</span></a></li></ol>
+          <ol><li><a data-section-link href="#phase-one" aria-current="location"><span class="toc-number">01</span><span>规则在我脑子里</span></a></li><li><a data-section-link href="#assets"><span class="toc-number">02</span><span>蒸馏的边界</span></a></li><li><a data-section-link href="#phase-three"><span class="toc-number">03</span><span>被省下的工作</span></a></li></ol>
         </nav>
       </aside>
-      <article class="project-article" aria-label="AI 设计探索 · 思考文章">
-        <section class="project-section" id="phase-one" aria-labelledby="heading-phase-one"><span class="project-section-alias" id="phase-two" aria-hidden="true"></span><span class="project-section-alias" id="heading-phase-two" aria-hidden="true"></span><p class="project-eyebrow">01 / 能跑起来不等于值得用</p><h2 id="heading-phase-one">从 Figma 到代码，三条路径</h2><p>我试过三条路：让 <a class="term" tabindex="0" data-term="Codex">Codex<span class="term-tip" role="note">OpenAI 的编程智能体：可读取代码库、执行任务；实验中用它操作 Figma 画布与生成界面。</span></a> 通过 <a class="term" tabindex="0" data-term="Figma MCP">Figma MCP<span class="term-tip" role="note">通过 MCP 协议让 AI 直接操作 Figma 画布、读取和生成设计内容。</span></a> 操作画布，用整理好的 <a class="term" tabindex="0" data-term="Skill">Skill<span class="term-tip" role="note">给 AI 用的技能包：把规范、知识与流程整理成可调用的指令，约束 AI 按团队方式工作。</span></a> 约束生成；把设计要求写成 <a class="term" tabindex="0" data-term="Design MD">Design MD<span class="term-tip" role="note">设计要求的说明文档：把基础规范、产品知识与项目上下文写成 AI 可读的描述，用于约束生成。</span></a>，交给 <a class="term" tabindex="0" data-term="Figma Make">Figma Make<span class="term-tip" role="note">Figma 的 AI 生成能力：从描述与参考生成可运行、可交互的界面方案。</span></a>；再让 <a class="term" tabindex="0" data-term="Codex">Codex<span class="term-tip" role="note">OpenAI 的编程智能体：可读取代码库、执行任务；实验中用它操作 Figma 画布与生成界面。</span></a> 直接进入 <a class="term" tabindex="0" data-term="React">React<span class="term-tip" role="note">前端开发框架，以组件方式构建界面；设计系统按 React 组件落地到生产工程。</span></a> 工程，按现有组件生成界面。</p>
-<p>三条路的速度和质量各不相同：Codex 通过 Figma MCP 操作画布这条路，等一份稿子比我自己画还慢；用 <a class="term" tabindex="0" data-term="Figma Make">Figma Make<span class="term-tip" role="note">Figma 的 AI 生成能力：从描述与参考生成可运行、可交互的界面方案。</span></a> 或让 <a class="term" tabindex="0" data-term="Codex">Codex<span class="term-tip" role="note">OpenAI 的编程智能体：可读取代码库、执行任务；实验中用它操作 Figma 画布与生成界面。</span></a> 直接生成，其实很快；要求符合规范、在已有 React 组件的工程里生成，时间可以接受——但只擅长标准界面，稍微需要创造性的需求，完成得都不行。约束多有好有坏，得看诉求是什么。</p>
-<p>我没有停在加长提示词上，而是把基础规范、产品知识和当前项目材料分开，先看结构方向、再补细节。方向还没定就绑定所有 Token，只会让之后的推翻更贵。</p></section>
-<section class="project-section" id="assets" aria-labelledby="heading-assets"><span class="project-section-alias" id="responsibility" aria-hidden="true"></span><span class="project-section-alias" id="heading-responsibility" aria-hidden="true"></span><span class="project-section-alias" id="rules" aria-hidden="true"></span><span class="project-section-alias" id="heading-rules" aria-hidden="true"></span><p class="project-eyebrow">02 / 规范存得下经验，替不了判断</p><h2 id="heading-assets">规范能写进去多少</h2><p>为了避免 AI 把所有页面都做成同一种后台，我写进去的内容越来越多：产品里有哪些对象，哪些状态不能混淆，什么页面适合用表格。但规则写得再完整，也没有让我放心交出全部判断——规范保存的是已经形成的经验，遇到新需求，还要判断经验是否适用。</p>
-<p><a class="term" tabindex="0" data-term="Ask">Ask<span class="term-tip" role="note">以 AI 逐步承接一线值班工作为目标，连接问题受理、诊断与处置，在关键节点保留人的授权、纠正与接管。</span></a> 的审批场景就是例子：按钮和弹窗都可能符合规范，用户却未必看得清自己批准了什么。接受诊断原因，和同意执行恢复操作，是两个不同的决定；合成一个「确认」，界面更简洁，人的选择却变少了。这类取舍只能结合任务判断，无法靠控件是否合规来验收。</p>
+      <article class="project-article" aria-label="把经验蒸馏给 AI · 思考文章">
+        <section class="project-section" id="phase-one" aria-labelledby="heading-phase-one"><span class="project-section-alias" id="phase-two" aria-hidden="true"></span><span class="project-section-alias" id="heading-phase-two" aria-hidden="true"></span><p class="project-eyebrow">01 / 2025 年末，早一步</p><h2 id="heading-phase-one">2025 年末，规则都在我脑子里</h2><p>2025 年末接手 Ask 时，距离一次重要汇报只剩三天。一个大型产品的全部页面，用传统方式一页页手工做出来，还要保持高质量——三天几乎不可能完成。我用上了 <a class="term" tabindex="0" data-term="Figma Make">Figma Make<span class="term-tip" role="note">Figma 的 AI 生成能力：从描述与参考生成可运行、可交互的界面方案。2025 年 5 月发布测试版，7 月 25 日才向所有用户开放——2025 年末用它生成完整的大型产品几乎没有先例。</span></a>：它当年 7 月才向所有用户开放，面世不到半年。那时大家已经开始用 <a class="term" tabindex="0" data-term="Claude Code">Claude Code<span class="term-tip" role="note">Anthropic 的编程助手（2025 年 2 月发布）：在终端里直接编写和修改代码。</span></a>、<a class="term" tabindex="0" data-term="Codex">Codex<span class="term-tip" role="note">OpenAI 的编程智能体（2025 年 4 月发布）：可读取代码库、执行任务；实验中用它操作 Figma 画布与生成界面。</span></a> 写代码，但用 AI 直接生成产品页面的人还不多，完整的大型产品更没有先例。我算试得比较早的一批。那次的完整过程，写在 <a class="story-ref" href="../projects/ask.html">《从用户报障到问题解决，AI 与专家各司其职。》</a> 里。</p>
+<p>三天里做出来的 Demo，已经非常接近后来在 Figma Design 里落地的规范版本。当时没有 Design MD，也没有现成的约束文件，所有规则都在我脑子里：哪些地方要拆成 Biz Component，哪些状态不能混，什么页面适合用表格——这些判断先成了体系，才在大型产品里保持住质量。</p>
 <figure class="project-evidence">
-          <p class="project-evidence__source">Ask · 高保真设计方案局部</p>
-          <a class="project-evidence__preview" href="../assets/editorial/insight-ai-workbench-20261103.png" target="_blank" rel="noreferrer" data-evidence-open="evidence-insight-ai-workbench-20261103-1" aria-haspopup="dialog" aria-controls="evidence-insight-ai-workbench-20261103-1" aria-label="放大原始图：Ask 工作台中的根因确认、恢复操作与过程记录"><img src="../assets/editorial/insight-ai-workbench-20261103.png" alt="Ask 工作台中的根因确认、恢复操作与过程记录" width="1625" height="1172" loading="lazy" decoding="async"></a>
-          <figcaption>接受建议、修改根因和执行 SOP 是不同的决定。工作台将这些操作与过程记录放在一起，让人能够理解并介入。</figcaption>
-          <dialog class="project-lightbox" id="evidence-insight-ai-workbench-20261103-1" aria-labelledby="evidence-title-insight-ai-workbench-20261103-1">
-            <header><p id="evidence-title-insight-ai-workbench-20261103-1">Ask · 高保真设计方案局部</p><button type="button" data-evidence-close>关闭</button></header>
+
+          <a class="project-evidence__preview" href="../assets/editorial/ai-design-ask-components.png" target="_blank" rel="noreferrer" data-evidence-open="evidence-ai-design-ask-components-1" aria-haspopup="dialog" aria-controls="evidence-ai-design-ask-components-1" aria-label="放大原始图：Ask Demo 中的组件"><img src="../assets/editorial/ai-design-ask-components.png" alt="Ask Demo 中的组件" width="1816" height="1204" loading="lazy" decoding="async"></a>
+          <figcaption>Ask Demo 里的业务组件：AI 一边生成页面，我一边用设计系统的思路收敛结构、层层把关。</figcaption>
+          <dialog class="project-lightbox" id="evidence-ai-design-ask-components-1" aria-labelledby="evidence-title-ai-design-ask-components-1">
+            <header><p id="evidence-title-ai-design-ask-components-1">Ask Demo 中的组件</p><button type="button" data-evidence-close>关闭</button></header>
             <p class="project-lightbox__hint">左右滑动查看完整图</p>
-            <div class="project-lightbox__image" role="region" tabindex="0" aria-label="原图，窄屏下可横向浏览"><img src="../assets/editorial/insight-ai-workbench-20261103.png" alt="Ask 工作台中的根因确认、恢复操作与过程记录" width="1625" height="1172"></div>
-            <footer><span>接受建议、修改根因和执行 SOP 是不同的决定。工作台将这些操作与过程记录放在一起，让人能够理解并介入。</span></footer>
+            <div class="project-lightbox__image" role="region" tabindex="0" aria-label="原图，窄屏下可横向浏览"><img src="../assets/editorial/ai-design-ask-components.png" alt="Ask Demo 中的组件" width="1816" height="1204"></div>
+            <footer><span>Ask Demo 里的业务组件：AI 一边生成页面，我一边用设计系统的思路收敛结构、层层把关。</span></footer>
           </dialog>
-        </figure></section>
-<section class="project-section" id="phase-three" aria-labelledby="heading-phase-three"><p class="project-eyebrow">03 / 债在之后慢慢还</p><h2 id="heading-phase-three">被省下的工作去了哪里</h2><p>我做的这一系列探索，发生在「设计」还被承认应该独立存在的时期。到了 2026 年下半年，情况变了：设计环节在很多流程里被直接跳过，我所在的设计团队也在这一轮被解散。变化有两个背景：一部分产品团队认为 AI 生产的结果已经够用，但很多问题他们看不出来，用户侧的负面反馈也被忽略了；同时，工程型产品越来越少被真人访问，用户更多是让 agent 直接来操作。</p>
+        </figure>
+<p>这次实验算是比较成功的。成功之后，三个立场不同的人找到我，问的是同一个问题：为什么你能做出这个效果？</p>
+<dl class="project-roles"><div><dt>团队 Design Manager · 从团队出发</dt><dd>他想知道这条路能不能复制。安排专人，把我那上千轮对话整理出来交给 AI 总结——没有得到有效的结果。</dd></div><div><dt>CTO · 从公司出发</dt><dd>那段时间公司里不少人开始用 AI 试做产品。他专门约见我，问我是怎么用 AI 做设计的。</dd></div><div><dt>Figma 的产品负责人 · 从工具出发</dt><dd>来问我怎么用 Make 做出大型产品，还邀请我向他们的团队分享案例——涉及内部信息，只能拒绝。</dd></div></dl></section>
+<section class="project-section" id="assets" aria-labelledby="heading-assets"><span class="project-section-alias" id="responsibility" aria-hidden="true"></span><span class="project-section-alias" id="heading-responsibility" aria-hidden="true"></span><span class="project-section-alias" id="rules" aria-hidden="true"></span><span class="project-section-alias" id="heading-rules" aria-hidden="true"></span><p class="project-eyebrow">02 / 能写出来的，只有标准规范</p><h2 id="heading-assets">能蒸馏出来的，只有标准规范</h2><h3 class="project-subhead">我试着把自己蒸馏给 AI</h3>
+<p>他们问的是「为什么你能做到」，我把它翻译成另一个问题：我的做法里，哪些部分可以交给 AI？答案不在工具里，在知识以什么形态存在。2025 年末做 Ask 时，这些知识只在我脑子里；后来我试着把它们落成不同的载体——把设计要求写成 <a class="term" tabindex="0" data-term="Design MD">Design MD<span class="term-tip" role="note">设计要求的说明文档：把基础规范、产品知识与项目上下文写成 AI 可读的描述，用于约束生成。</span></a>，把规范、知识与流程整理成 <a class="term" tabindex="0" data-term="Skill">Skill<span class="term-tip" role="note">给 AI 用的技能包：把规范、知识与流程整理成可调用的指令，约束 AI 按团队方式工作。</span></a>，再沉淀成 AI 可查询的 <a class="term" tabindex="0" data-term="KnowledgeBase">KnowledgeBase<span class="term-tip" role="note">把产品知识、规范与上下文沉淀成 AI 可查询的内容。与 Design MD、Skill 一样，是设计知识在不同时期的载体形态。</span></a>。<a class="term" tabindex="0" data-term="Figma MCP">Figma MCP<span class="term-tip" role="note">通过 MCP 协议让 AI 直接操作 Figma 画布、读取和生成设计内容。</span></a>、<a class="term" tabindex="0" data-term="Codex">Codex<span class="term-tip" role="note">OpenAI 的编程智能体（2025 年 4 月发布）：可读取代码库、执行任务；实验中用它操作 Figma 画布与生成界面。</span></a> 只是这些载体跑起来的形式：工具在换，载体的形态也跟着时代在变。</p>
+<p>载体跑在什么工具上，差别很大：让 <a class="term" tabindex="0" data-term="Codex">Codex<span class="term-tip" role="note">OpenAI 的编程智能体（2025 年 4 月发布）：可读取代码库、执行任务；实验中用它操作 Figma 画布与生成界面。</span></a> 通过 <a class="term" tabindex="0" data-term="Figma MCP">Figma MCP<span class="term-tip" role="note">通过 MCP 协议让 AI 直接操作 Figma 画布、读取和生成设计内容。</span></a> 操作画布，等一份稿子比我自己画还慢；交给 <a class="term" tabindex="0" data-term="Figma Make">Figma Make<span class="term-tip" role="note">Figma 的 AI 生成能力：从描述与参考生成可运行、可交互的界面方案。2025 年 5 月发布测试版，7 月 25 日才向所有用户开放——2025 年末用它生成完整的大型产品几乎没有先例。</span></a> 或让 Codex 直接在 <a class="term" tabindex="0" data-term="React">React<span class="term-tip" role="note">前端开发框架，以组件方式构建界面；设计系统按 React 组件落地到生产工程。</span></a> 工程里生成，速度快得多，但只擅长标准界面。我没有停在加长提示词上，而是把基础规范、产品知识和当前项目材料分开，先看结构方向、再补细节。</p>
+<h3 class="project-subhead">写不进规范的部分</h3>
+<p>为了避免 AI 把所有页面都做成同一种后台，我写进去的内容越来越多：产品里有哪些对象，哪些状态不能混淆，什么页面适合用表格。但规则写得再完整，也写不进判断。</p>
+<p><a class="term" tabindex="0" data-term="Ask">Ask<span class="term-tip" role="note">面向一线值班的 AI 产品：用户报障后，AI 先分析、再处置，值班专家在关键节点授权、纠正或接管。</span></a> 的审批场景就是例子：按钮和弹窗都符合规范，用户却未必看得清自己批准了什么。接受诊断原因，和同意执行恢复操作，是两个不同的决定——这条可以写成一条规则，但为什么这个场景需要这条规则、下一个场景又该怎么变，规则替不了。</p>
+<p>蒸馏到最后，能结构化写出来的，是标准规范；最有价值的判断部分——为什么在这里拆组件、哪种差异必须保留、什么风险不能放行——没法蒸馏。它不在对话记录里，也不在任何一份文档里，它在我一遍遍看结果、找问题的过程里。</p></section>
+<section class="project-section" id="phase-three" aria-labelledby="heading-phase-three"><p class="project-eyebrow">03 / 债在之后慢慢还</p><h2 id="heading-phase-three">被省下的工作去了哪里</h2><p>载体的形态还在演进，行业已经走到了另一个方向：这套探索发生时，「设计」还被承认应该独立存在；到了 2026 年下半年，设计环节在很多流程里被直接跳过。</p>
 <p>设计环节被跳过之后，那些没被回答的问题并没有消失：用户要额外辨认操作范围，遇到异常只能从头再来。债不是上线那天就爆，是在之后的使用和维护里慢慢还的。</p>
-<p>这件事和岗位名称没有必然关系：产品、研发同样能做出好的设计判断。只要流程变了，就要重新确认谁来理解用户任务、谁来比较取舍、谁来检查那些没有走通的情况。</p>
-<p>这套方法值不值得继续，要把生成、纠正和维护的成本放在一起看。在那之前，我不会把判断交给一套写全了的规范。</p></section>
+<p>这件事和岗位名称没有必然关系：产品、研发同样能做出好的设计判断。只要流程变了，就要重新确认谁来理解用户任务、谁来比较取舍、谁来检查那些没有走完的步骤。</p></section>
         <p class="project-disclosure">相关文件涉及企业内部信息，可在面试交流中结合脱敏处理后的材料展开介绍。</p>
-        <div class="project-article__end"><span>AI 设计探索 / END</span><a href="#top">回到开头</a></div>
+        <div class="project-article__end"><span>把经验蒸馏给 AI / END</span><a href="#top">回到开头</a></div>
       </article>
     </div>
   </main>

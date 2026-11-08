@@ -1,0 +1,20 @@
+/* 项目页 GIF 演示：自动播放（可见时），同屏只播一个，离开视口停止；点击可暂停/恢复。 */
+.project-gif{margin:36px 0 44px}
+.project-gif__stage{position:relative;line-height:0;border:1px solid #dce4f0;border-radius:10px;overflow:hidden;background:#f6f9ff}
+.project-gif__frame{display:block;max-width:100%;height:auto;cursor:pointer}
+.project-gif figcaption{margin-top:13px;font-size:13px;line-height:1.75;color:#62666e}
+.project-gif .project-source{color:#7d8699;font-size:12px}
+
+/* 产品流程：页头代码绘制流程图 */
+.product-flow{margin:26px 0 32px}
+.product-flow ol{list-style:none;margin:0;padding:18px 16px;display:flex;flex-wrap:wrap;gap:0;counter-reset:step;border:1px solid #dce4f0;border-radius:12px;background:#f8fbff}
+.product-flow li{flex:1 1 0;min-width:150px;display:flex;flex-direction:column;gap:4px;padding:6px 18px 6px 8px;position:relative}
+.product-flow li::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-size:11px;color:#7d93b8;letter-spacing:.06em}
+.product-flow li::after{content:"→";position:absolute;right:2px;top:50%;transform:translateY(-50%);color:#9db2cf;font-size:15px}
+.product-flow li:last-child::after{content:none}
+.product-flow li strong{font-weight:600;font-size:15px;color:#1d2b3a}
+.product-flow li span{font-size:13px;line-height:1.6;color:#62666e}
+.product-flow__caption{margin:10px 2px 0;font-size:13px;color:#7d8699}
+
+/* 四格小图行：点击看大图 */
+@media (max-width:900px){.image-row{grid-template-columns:repeat(2,minmax(0,1fr))}}

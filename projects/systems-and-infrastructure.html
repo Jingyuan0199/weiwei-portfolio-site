@@ -1,81 +1,8 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="一个新的需求，是放进公共组件，还是留在业务里？我每次都要先回答同一件事：什么该共用，什么各留各的。统一不是合并，是先把边界画清楚。">
-  <meta name="color-scheme" content="light">
-  <title>结构与复用 — 统一之前，先把边界画清楚 — 段微微</title>
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/styles.css?v=740b930967">
-  <link rel="stylesheet" href="../assets/site-chrome.css?v=7970a9ec63">
-  <link rel="stylesheet" href="../assets/gallery.css?v=b337248e62">
-  <link rel="stylesheet" href="../assets/portfolio-v2.css?v=b08bdada2c">
-  <link rel="stylesheet" href="../assets/editorial-refresh.css?v=324c366d32">
-<link rel="stylesheet" href="../assets/concierge.css?v=bfc2201f78">
-<link rel="stylesheet" href="../assets/typography.css?v=69970a27d3"><link rel="stylesheet" href="../assets/story-terms.css?v=7903b8e633"><link rel="canonical" href="https://weiweiduan.cn/projects/systems-and-infrastructure.html"><meta property="og:url" content="https://weiweiduan.cn/projects/systems-and-infrastructure.html"><meta property="og:type" content="website"><meta property="og:title" content="结构与复用 — 统一之前，先把边界画清楚 — 段微微"><meta property="og:description" content="一个新的需求，是放进公共组件，还是留在业务里？我每次都要先回答同一件事：什么该共用，什么各留各的。统一不是合并，是先把边界画清楚。"></head>
-<body class="editorial-project editorial-essay revamp" data-project="systems-and-infrastructure">
-  <a class="project-skip" href="#main">跳到正文</a>
-  <header class="portfolio-header"><div class="portfolio-header__inner"><button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">浏览</button><nav class="portfolio-nav" id="primary-navigation" aria-label="主要导航"><a href="../index.html"><span>首页</span></a><a href="../projects.html"><span>项目</span></a><a href="../insights.html"><span>思考</span></a><a href="../career.html"><span>简历</span></a></nav><div class="header-actions"><div class="contact-menu" id="contact"><button type="button" class="contact-trigger" aria-expanded="false" aria-controls="contact-popover">联系 <span aria-hidden="true">↗</span></button><div id="contact-popover" class="contact-popover" aria-label="联系方式" hidden>
-    <div class="contact-options">
-      <div class="contact-method" aria-label="电话：13266821218"><small>电话</small><div class="contact-method__line"><strong>13266821218</strong><button class="contact-copy" type="button" data-copy-text="13266821218" data-copy-kind="电话" aria-label="复制电话号码">复制</button></div></div>
-      <div class="contact-method" aria-label="邮箱：978278902@qq.com"><small>邮箱</small><div class="contact-method__line"><strong>978278902@qq.com</strong><button class="contact-copy" type="button" data-copy-text="978278902@qq.com" data-copy-kind="邮箱" aria-label="复制邮箱地址">复制</button></div></div>
-      <div class="contact-method contact-wechat" aria-label="微信号：jingyuan0199"><small>微信</small><div class="contact-method__line"><strong>jingyuan0199</strong><button class="contact-copy" type="button" data-copy-text="jingyuan0199" data-copy-kind="微信号" aria-label="复制微信号">复制</button></div><div class="contact-qr-image"><img src="../assets/contact-wechat.jpg" width="888" height="1131" alt="微信二维码，扫码添加好友"></div></div>
-    </div></div></div><button type="button" class="concierge-trigger" aria-haspopup="dialog" aria-expanded="false" aria-label="问问微微，AI 导览助手" data-concierge-root="../"><span class="concierge-avatar"><img src="../assets/characters/weiwei-pearl-blue-v1.png" alt="" width="40" height="40"></span><span class="concierge-trigger__label">问问微微</span><span class="concierge-ai">AI</span></button></div></div></header>
-  <div class="gallery-daylight" aria-hidden="true"></div>
-  <main id="main">
-    <header class="project-shell project-intro" id="top">
-      <div class="project-hero">
-        <div class="project-hero__copy">
-          <div class="product-identity"><strong>结构与复用</strong><span class="product-tag">产品与判断</span></div>
-
-
-          <h1>统一之前，先把边界画清楚</h1>
-          <p class="project-deck">一个新的需求，是放进公共组件，还是留在业务里？我每次都要先回答同一件事：什么该共用，什么各留各的。统一不是合并，是先把边界画清楚。</p>
-
-
-        </div>
-
-      </div>
-
-
-      <dl class="project-meta"><div><dt>更新日期</dt><dd>2026-11-07</dd></div><div><dt>阅读</dt><dd>约 3 分钟</dd></div><div><dt>相关项目</dt><dd><a class="term" tabindex="0" data-term="Infra Design System">Infra Design System<span class="term-tip" role="note">Infra Design System（基础设施设计系统），简称 InfraD。由设计与前端共同建设维护，连接组件、业务模式、页面模板、使用指南与 Design Tokens，支持多业务主题及持续演进。</span></a> · <a class="term" tabindex="0" data-term="Space">Space<span class="term-tip" role="note">Shopee Engineering Infrastructure 建设的平台：日志、监控、Service CMDB、Server CMDB 等子产品都内置于其中，按产品线组织。</span></a> · <a class="term" tabindex="0" data-term="DataSuite">DataSuite<span class="term-tip" role="note">Shopee Data Infrastructure（数据基础设施）建设的平台，覆盖数据接入、开发、调度、分析与治理。</span></a></dd></div></dl>
-
-    </header>
-    <div class="project-shell project-reading-layout">
-      <aside class="project-rail" aria-label="本页章节">
-        <nav class="project-toc" aria-label="本文脉络">
-          <p class="project-toc__title">本文脉络</p>
-          <ol><li><a data-section-link href="#contract" aria-current="location"><span class="toc-number">01</span><span>统一到哪里</span></a></li><li><a data-section-link href="#cost"><span class="toc-number">02</span><span>全局与局部</span></a></li><li><a data-section-link href="#ai"><span class="toc-number">03</span><span>把边界画给别人看</span></a></li></ol>
-        </nav>
-      </aside>
-      <article class="project-article" aria-label="结构与复用 · 思考文章">
-        <section class="project-section" id="contract" aria-labelledby="heading-contract"><span class="project-section-alias" id="layers" aria-hidden="true"></span><span class="project-section-alias" id="heading-layers" aria-hidden="true"></span><p class="project-eyebrow">01 / 统一不是合并</p><h2 id="heading-contract">统一之前，先决定边界</h2><p>做 <a class="term" tabindex="0" data-term="Infra Design System">Infra Design System<span class="term-tip" role="note">Infra Design System（基础设施设计系统），简称 InfraD。由设计与前端共同建设维护，连接组件、业务模式、页面模板、使用指南与 Design Tokens，支持多业务主题及持续演进。</span></a> 时，最常面对的问题不是「要不要统一」，而是「统一到哪里」：同样叫表格，有的帮人定位资源，有的用来比较安全策略，有的核查执行结果。外观接近，只是进一步分析的起点。</p>
-<p>2021 年那会儿，深圳的 SC Guideline、新加坡基于 <a class="term" tabindex="0" data-term="Ant Design">Ant Design<span class="term-tip" role="note">广泛使用的 React 组件体系；InfraD 的基础组件基于它统一，保留交互、调整颜色与圆角。</span></a> 的规范、STC 的另一套资产同时在用。同年 10 月，我们定下方向：统一基于 Ant Design 原生基础组件，维护同一份文件，保留它的交互，调整颜色与圆角，按需扩展业务组件。统一不是把三套拼成一套，而是先决定哪些是公共的、哪些留给业务。</p></section>
-<section class="project-section" id="cost" aria-labelledby="heading-cost"><span class="project-section-alias" id="migration" aria-hidden="true"></span><span class="project-section-alias" id="heading-migration" aria-hidden="true"></span><p class="project-eyebrow">02 / 全局语义与局部例外</p><h2 id="heading-cost">全局和局部，分开配置</h2><p>升级 Token 时，同样的问题又出现一次：全局的语义和组件的局部例外，必须分开配置，而不是全部塞进同一条链。</p>
-<dl class="project-roles"><div><dt>全局语义 · 通用圆角</dt><dd>Default · Space 2，Smart 8，Ask 8，AIOps 6</dd></div><div><dt>组件默认</dt><dd>组件引用语义变量，不写死数值</dd></div><div><dt>局部例外 · Tag 圆角</dt><dd>Smart 4，Ask 16，AIOps 4</dd></div></dl>
-<figure class="project-evidence">
-          <p class="project-evidence__source">Infra Design System · Figma 组件变量实录局部</p>
-          <a class="project-evidence__preview" href="../assets/editorial/insight-system-modes-20261103.png" target="_blank" rel="noreferrer" data-evidence-open="evidence-insight-system-modes-20261103-78" aria-haspopup="dialog" aria-controls="evidence-insight-system-modes-20261103-78" aria-label="放大原始图：同一语义变量在 Default、Smart、Ask 与 AiOps 模式下的映射"><img src="../assets/editorial/insight-system-modes-20261103.png" alt="同一语义变量在 Default、Smart、Ask 与 AiOps 模式下的映射" width="3140" height="1765" loading="lazy" decoding="async"></a>
-          <figcaption>组件引用共同的语义变量，不同模式保留产品的配置空间；这是已有资产的实际组织方式。</figcaption>
-          <dialog class="project-lightbox" id="evidence-insight-system-modes-20261103-78" aria-labelledby="evidence-title-insight-system-modes-20261103-78">
-            <header><p id="evidence-title-insight-system-modes-20261103-78">Infra Design System · Figma 组件变量实录局部</p><button type="button" data-evidence-close>关闭</button></header>
-            <p class="project-lightbox__hint">左右滑动查看完整图</p>
-            <div class="project-lightbox__image" role="region" tabindex="0" aria-label="原图，窄屏下可横向浏览"><img src="../assets/editorial/insight-system-modes-20261103.png" alt="同一语义变量在 Default、Smart、Ask 与 AiOps 模式下的映射" width="3140" height="1765"></div>
-            <footer><span>组件引用共同的语义变量，不同模式保留产品的配置空间；这是已有资产的实际组织方式。</span></footer>
-          </dialog>
-        </figure>
-<p>这样产品能沿用共同基础、同时拥有自己的主题；把一切差异都塞进同一个参数，最后谁都用不明白。</p>
-<p>后来支持 <a class="term" tabindex="0" data-term="DataSuite">DataSuite<span class="term-tip" role="note">Shopee Data Infrastructure（数据基础设施）建设的平台，覆盖数据接入、开发、调度、分析与治理。</span></a>，起点又不一样：平台已经成型，不同产品混着不同版本的 Ant Design，老旧和定制实现并存。我们走的是渐进的路：有设计师支持的业务范围采用新的资产和方式，没有新设计需求的部分保持原状。主题适配能力、部分业务使用、全产品线迁移，是三件不同的事。</p></section>
-<section class="project-section" id="ai" aria-labelledby="heading-ai"><span class="project-section-alias" id="usage" aria-hidden="true"></span><span class="project-section-alias" id="heading-usage" aria-hidden="true"></span><p class="project-eyebrow">03 / 边界要让别人用得起</p><h2 id="heading-ai">把边界画给别人看</h2><p>组件发布以后，工作没有结束。我持续维护 Design Guide，把选择依据、组合方式和场景说明放在查阅资产的入口：一个人找到组件之后，还要能判断适不适合当前任务，遇到例外该从哪里继续。</p>
-<p>统一从来不是终点。边界画清楚了，剩下的东西才真正能被复用——后面的人找得到、用得明白，遇到差异时还能继续扩展。</p></section>
-        <p class="project-disclosure">相关文件涉及企业内部信息，可在面试交流中结合脱敏处理后的材料展开介绍。</p>
-        <div class="project-article__end"><span>结构与复用 / END</span><a href="#top">回到开头</a></div>
-      </article>
-    </div>
-  </main>
-  <script src="../assets/main.js?v=be4567e865"></script>
-  <script src="../assets/site-navigation.js?v=06a5729ac0"></script>
-  <script src="../assets/editorial-interactions.js?v=a277e7ed86"></script>
-<script src="../assets/concierge-boot.js?v=b23f8cbee4"></script></body>
-</html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>内容已整理 · 段微微</title><link rel="canonical" href="infrad.html"><script>
+const route={"target": "infrad.html#context"};
+const anchor=location.hash.slice(1);
+const destination=route.anchors?.[anchor] || route.target;
+const next=new URL(destination,location.href);
+next.search=location.search;
+location.replace(next.href);
+</script><noscript><meta http-equiv="refresh" content="0;url=infrad.html#context"></noscript></head><body data-redirect="true"><p>这篇内容已整理到新的位置。<a href="infrad.html#context">继续阅读</a></p></body></html>
