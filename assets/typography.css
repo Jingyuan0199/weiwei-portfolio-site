@@ -58,6 +58,8 @@ body.home-v2 .landing-copy h1 {
   font: 600 var(--type-display)/1.3 var(--type-serif);
   letter-spacing: -.025em;
 }
+/* Latin serif needs looser tracking than CJK; keep the English headline readable. */
+html[lang="en"] body.home-v2 .landing-copy h1 { letter-spacing: 0; }
 
 body.home-page .overview-intro h1,
 body.editorial-project .project-hero h1,

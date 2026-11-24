@@ -3,6 +3,9 @@
   const trigger = document.querySelector('.concierge-trigger');
   if (!trigger) return;
   const root = trigger.dataset.conciergeRoot || '';
+  const lang = trigger.dataset.conciergeLang === 'en' ? 'en' : 'zh';
+  window.WEIWEI_CONCIERGE_LANG = lang;
+  const dataFile = lang === 'en' ? 'concierge-data-en.js' : 'concierge-data.js';
   let modulePromise;
   const loadScript = name => new Promise((resolve, reject) => {
     const script = document.createElement('script');
@@ -12,7 +15,7 @@
     document.head.append(script);
   });
   const load = () => modulePromise ||= Promise.all([
-    window.WEIWEI_CONCIERGE_DATA ? Promise.resolve() : loadScript('concierge-data.js'),
+    window.WEIWEI_CONCIERGE_DATA ? Promise.resolve() : loadScript(dataFile),
     window.WeiweiConcierge ? Promise.resolve() : loadScript('concierge.js')
   ]).catch(error => { modulePromise = null; throw error; });
   const requestOpen = async event => {
@@ -26,10 +29,13 @@
         const notice = document.createElement('div');
         notice.className = 'concierge-load-error';
         notice.setAttribute('role', 'status');
-        notice.append('助手暂时没有加载成功，请再点一次。也可以直接');
+        notice.append(lang === 'en' ? 'The assistant failed to load. Tap again, or browse the ' : '助手暂时没有加载成功，请再点一次。也可以直接');
         const link = document.createElement('a');
-        link.href = root + 'projects.html'; link.textContent = '浏览项目';
-        notice.append(link); trigger.after(notice);
+        link.href = root + 'projects.html';
+        link.textContent = lang === 'en' ? 'projects' : '浏览项目';
+        notice.append(link);
+        if (lang === 'en') notice.append('.');
+        trigger.after(notice);
       }
     } finally { trigger.removeAttribute('aria-busy'); }
   };
@@ -38,7 +44,6 @@
     else window.dispatchEvent(new CustomEvent('weiwei:concierge-open', { detail: { source: 'navigation' } }));
   });
   window.addEventListener('weiwei:concierge-open', requestOpen);
-  // Restore only a conversation which the visitor was already using in this tab.
   try {
     if (JSON.parse(sessionStorage.getItem('weiwei-concierge-preview-v1') || 'null')?.open) {
       window.dispatchEvent(new CustomEvent('weiwei:concierge-open', { detail: { source: 'restore' } }));
